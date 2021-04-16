@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://topsetplus.com/</loc>
+  <lastmod>2020-09-28T17:01:18+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://topsetplus.com/index.html</loc>
+  <lastmod>2020-09-28T17:01:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://topsetplus.com/indexs.html</loc>
+  <lastmod>2020-09-28T17:01:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://topsetplus.com/TopSet%20plus%20Catalogue.pdf</loc>
+  <lastmod>2020-09-27T01:20:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
