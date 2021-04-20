@@ -1,7 +1,99 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  z-index: 3;
+  font-size: 2rem;
+  border-radius: 25px;
+  padding: 0.2em 1em;
+}
+
+.btn__black {
+  letter-spacing: 2px;
+  background: rgba(5, 5, 5, 0.6);
+  border: 2px solid rgba(206, 204, 204, 0.8);
+  -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.2);
+          box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.2);
+  text-shadow: 0px 0px 10px rgba(5, 5, 5, 0.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-animation: senkaDugme 5s infinite;
+          animation: senkaDugme 5s infinite;
+}
+
+.btn__black:hover {
+  color: white;
+  border-color: white;
+  background-color: rgba(206, 204, 204, 0.2);
+}
+
+.btn__green {
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 204, 102, 0.5)), to(rgba(0, 204, 102, 0.7)));
+  background: linear-gradient(360deg, rgba(0, 204, 102, 0.5), rgba(0, 204, 102, 0.7));
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 0px 10px #050505;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn__green:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.2);
+          box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: white;
+  border-color: white;
+  background-color: rgba(206, 204, 204, 0.2);
+}
+
+@-webkit-keyframes senkaDugme {
+  0% {
+    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.8);
+            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.8);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+  }
+}
+
+@keyframes senkaDugme {
+  0% {
+    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.8);
+            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.8);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+  }
+}
+
+.call-to-action {
+  position: relative;
+  text-align: center;
+  z-index: 3;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  position: relative;
+  position: absolute;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -17,21 +109,27 @@ body {
   height: 100vh;
   margin: 0;
   position: relative;
-  background: url("../img/pozadina3.jpg");
+  background: url("../img/ribolov1.jpg");
   background-origin: border-box;
   background-size: cover;
   border: 5px solid #00cc66;
 }
 
-.kutija #logo {
+.kutija #hero-content {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.kutija #hero-content #logo {
   position: relative;
   opacity: 0.9;
-  top: -2rem;
+  top: -1rem;
   margin: auto;
-  background: url("../img/logo.png") no-repeat center center;
-  background-size: 80% 70%;
-  width: 600px;
+  background: url("../img/topsetplus.png") no-repeat center center;
+  background-size: 80% 50%;
+  max-width: 450px;
   height: 280px;
+  max-height: auto;
   -webkit-transition: all 0.5s ease-in-out 0.1s;
   transition: all 0.5s ease-in-out 0.1s;
   -webkit-animation-name: senkaLogo;
@@ -43,7 +141,7 @@ body {
   z-index: 3;
 }
 
-.kutija #logo:hover {
+.kutija #hero-content #logo:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
 }
@@ -78,129 +176,28 @@ body {
   }
 }
 
-.kutija #nadnaslov {
+.kutija #hero-content #nadnaslov {
   position: relative;
-  top: 1rem;
   text-align: center;
-  font-size: 45px;
+  font-size: 2rem;
+  font-weight: 700;
+  top: 3rem;
   text-shadow: 1px 1px 3px rgba(206, 204, 204, 0.6);
-  font-weight: bolder;
   color: #050505;
-  z-index: 3;
+  letter-spacing: 2px;
 }
 
-.kutija #podnaslov {
+.kutija #hero-content #podnaslov {
   position: relative;
-  top: -2rem;
   text-align: center;
-  font-size: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  top: -3rem;
   text-shadow: 5px 5px 5px #050505;
-  font-weight: bold;
   color: #cecccc;
-  z-index: 3;
-}
-
-.kutija .button {
-  position: relative;
-  top: 1rem;
-  background: rgba(5, 5, 5, 0.6);
-  border-width: 2px;
-  border-color: rgba(206, 204, 204, 0.8);
-  border-style: solid;
-  border-radius: 25px;
-  text-align: center;
-  width: 200px;
-  height: 45px;
-  margin: auto;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  padding-top: 10px;
-  z-index: 3;
-  -webkit-animation: senkaDugme 5s infinite;
-          animation: senkaDugme 5s infinite;
-}
-
-.kutija .button a {
-  position: relative;
-  bottom: 10%;
-  text-decoration: none;
-  color: rgba(206, 204, 204, 0.9);
-  margin: auto;
-  font-weight: bold;
-  font-size: 20px;
-  text-shadow: 2px 2px 5px #050505;
-}
-
-.kutija .button:hover {
-  color: white;
-  border-color: white;
-  background-color: rgba(206, 204, 204, 0.2);
-  width: 220px;
-}
-
-@-webkit-keyframes senkaDugme {
-  50% {
-    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.6);
-            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.6);
-  }
-}
-
-@keyframes senkaDugme {
-  50% {
-    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.6);
-            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.6);
-  }
-}
-
-.kutija #social-media {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0.3)), to(rgba(5, 5, 5, 0.5)));
-  background: linear-gradient(360deg, rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0.5));
-  color: #cecccc;
-  width: 100%;
-  height: 60px;
-  z-index: 4;
-}
-
-.kutija #social-media div a {
-  color: inherit;
-  font-size: 35px;
-  /* padding-right: 50px; */
-  z-index: 4;
-  cursor: pointer;
-  text-shadow: 0px 0px 3px rgba(0, 204, 102, 0.4);
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
-.kutija #social-media div a:hover {
-  color: rgba(0, 204, 102, 0.8);
-  font-size: 45px;
-  text-shadow: 0px 0px 2px rgba(206, 204, 204, 0.3);
 }
 
 /* HERO END */
-.text {
-  color: white;
-  position: relative;
-  top: -1rem;
-  text-align: center;
-  font-size: 30px;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
 /* FOG START */
 .fog-container {
   position: absolute;
@@ -208,7 +205,7 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: 1;
-  opacity: 0.6;
+  opacity: 0.7;
   /* FOG END */
 }
 
@@ -220,7 +217,7 @@ body {
 }
 
 .fog-container .fog-img-first {
-  background: url("../img/fog-1.png");
+  background: url("../img/ribolov2.png");
   background-repeat: repeat-x;
   background-size: contain;
   background-position: center;
@@ -229,7 +226,7 @@ body {
 }
 
 .fog-container .fog-img-second {
-  background: url("../img/fog-2.png");
+  background: url("../img/ribolov3.png");
   background-repeat: repeat-x;
   background-size: contain;
   background-position: center;
@@ -261,124 +258,91 @@ body {
 
 /* NAVBAR START */
 .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   bottom: 0;
-  width: 99.3%;
-  height: 80px;
-  margin: 0;
-  margin-left: 6px;
+  width: 100%;
+  border: 5px solid #00cc66;
+  border-top: 0px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0.3)), to(rgba(5, 5, 5, 0.5)));
   background: linear-gradient(360deg, rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0.5));
-  padding-top: 10px;
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  padding: 7px 0px 7px 0px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 5;
-}
-
-.navbar .items {
-  padding-left: 20%;
-  margin-top: 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 60%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.navbar li {
-  position: relative;
-  display: inline-block;
-  color: white;
-  width: 200px;
-  height: 45px;
-  border: 2px solid rgba(206, 204, 204, 0.8);
-  border-radius: 25px;
-  text-shadow: 3px 3px 6px #050505;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 204, 102, 0.5)), to(rgba(0, 204, 102, 0.7)));
-  background: linear-gradient(360deg, rgba(0, 204, 102, 0.5), rgba(0, 204, 102, 0.7));
-  z-index: 4;
-}
-
-.navbar li:hover {
-  border-color: white;
-  background-color: rgba(206, 204, 204, 0.4);
-  width: 220px;
-}
-
-.navbar li:first-child {
-  margin-left: 0px;
-}
-
-.navbar li .nav-link {
-  position: relative;
-  z-index: 4;
-  color: inherit;
-  text-decoration: none;
 }
 
 .scroll {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 255, 0, 0.7)));
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 0, 0.7));
-  width: 100%;
-  margin-left: 0px;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  border: 0px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /* NAVBAR END */
 /* ABOUT US START */
 #about {
-  padding: 3%;
-  padding-left: 20%;
-  padding-right: 20%;
+  position: relative;
+  padding: 5% 20% 5% 20%;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0.1)), to(rgba(5, 5, 5, 0.3)));
   background: linear-gradient(360deg, rgba(5, 5, 5, 0.1), rgba(5, 5, 5, 0.3));
 }
 
 #about #about-section {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  max-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: inherit;
+  gap: 5%;
 }
 
 #about #about-section #about-img {
-  margin-top: 2%;
-  width: 50%;
-  height: 350px;
-  -webkit-box-shadow: 0px 0px 15px rgba(5, 5, 5, 0.6);
-          box-shadow: 0px 0px 15px rgba(5, 5, 5, 0.6);
-  border-radius: 5%;
-  opacity: 0.9;
+  position: relative;
+  height: auto;
+  max-width: 70%;
+  max-height: 350px;
+  -webkit-box-shadow: 10px 5px 10px rgba(5, 5, 5, 0.5);
+          box-shadow: 10px 5px 10px rgba(5, 5, 5, 0.5);
+  border-right: 10px solid rgba(255, 255, 255, 0.8);
+  border-top: 5px solid #00cc66;
+  border-bottom: 20px solid #cecccc;
+  z-index: 3;
 }
 
 #about #about-section #about-us {
-  height: 400px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  position: relative;
+  left: 66px;
+  top: -17.5px;
+  z-index: 2;
+  padding: 0px 35px 35px 50px;
   color: rgba(5, 5, 5, 0.8);
+  border: 20px solid #cecccc;
 }
 
 #about #about-section #about-us #about-title {
-  text-align: center;
-  font-size: 40px;
+  font-size: 2em;
   font-weight: bolder;
   margin-top: 2px;
   text-shadow: 3px 3px 5px rgba(5, 5, 5, 0.5);
@@ -387,34 +351,32 @@ body {
 
 #about #about-section #about-us #about-title .rec {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 2px 2px 7px rgba(5, 5, 5, 0.7);
+  text-shadow: 5px 5px 2px rgba(5, 5, 5, 0.5);
 }
 
 #about #about-section #about-us #about-title-small {
   position: relative;
-  left: 300px;
+  left: 200px;
   color: rgba(5, 5, 5, 0.8);
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: bolder;
   margin-bottom: 2px;
-  text-shadow: 5px 5px 8px rgba(5, 5, 5, 0.3);
+  text-shadow: 10px 5px 3px rgba(5, 5, 5, 0.3);
+  z-index: 4;
 }
 
 #about #about-section #about-us #about-p {
-  padding-right: 100px;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
 #about #about-section #about-us #h-line1 {
-  border: 3px solid rgba(0, 204, 102, 0.7);
-  background-color: rgba(0, 204, 102, 0.7);
-  -webkit-box-shadow: 0px 0px 7px rgba(5, 5, 5, 0.2);
-          box-shadow: 0px 0px 7px rgba(5, 5, 5, 0.2);
   position: relative;
-  left: 240px;
+  border: 2px solid #00cc66;
+  background-color: #00cc66;
+  left: 100px;
   z-index: 3;
-  width: 65%;
+  width: 70%;
 }
 
 #about #about-section #about-us #h-line3 {
@@ -423,8 +385,15 @@ body {
   -webkit-box-shadow: 0px 0px 7px rgba(5, 5, 5, 0.2);
           box-shadow: 0px 0px 7px rgba(5, 5, 5, 0.2);
   position: relative;
-  width: 70%;
-  left: 20px;
+  width: 100%;
+  z-index: 3;
+  left: -100px;
+}
+
+#about #about-section > * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
 }
 
 /* ABOUT US END */

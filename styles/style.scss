@@ -6,9 +6,92 @@ $primaryGreen: rgb(0, 204, 102);
 $primaryBlack: rgb(5, 5, 5);
 $primaryGray: rgb(206, 204, 204);
 
+@mixin flexin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin naslov {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  color: rgba(white, 0.9);
+  text-decoration: none;
+  z-index: 3;
+  font-size: 2rem;
+  border-radius: 25px;
+  padding: 0.2em 1em;
+
+  &__black {
+    letter-spacing: 2px;
+    background: rgba($primaryBlack, 0.6);
+    border: 2px solid rgba($primaryGray, 0.8);
+    box-shadow: 0px 0px 10px rgba($primaryGray, 0.2);
+    text-shadow: 0px 0px 10px rgba($primaryBlack, 0.5);
+    transition: all 0.4s ease-in-out;
+    animation: senkaDugme 5s infinite;
+    &:hover {
+      color: white;
+      border-color: white;
+      background-color: rgba($primaryGray, 0.2);
+      // width: 4em;
+    }
+  }
+
+  &__green {
+    font-size: 1.7em;
+    letter-spacing: 1px;
+    background: linear-gradient(
+      360deg,
+      rgba($primaryGreen, 0.5),
+      rgba($primaryGreen, 0.7)
+    );
+    border: 2px solid rgba(white, 0.8);
+    text-shadow: 0px 0px 10px $primaryBlack;
+    transition: all 0.3s ease-out;
+    &:hover {
+      box-shadow: 0px 0px 10px rgba($primaryGray, 0.2);
+      transform: scale(1.05);
+      color: white;
+      border-color: white;
+      background-color: rgba($primaryGray, 0.2);
+    }
+  }
+}
+
+@keyframes senkaDugme {
+  0% {
+    box-shadow: 0px 0px 10px rgba($primaryGray, 0.4);
+  }
+  50% {
+    box-shadow: 0px 0px 10px rgba($primaryGray, 0.8);
+  }
+  100% {
+    box-shadow: 0px 0px 10px rgba($primaryGray, 0.4);
+  }
+}
+
+.call-to-action {
+  position: relative;
+  text-align: center;
+  z-index: 3;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
 body {
   font-family: $primaryFont;
-  position: relative;
+  position: absolute;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -23,146 +106,64 @@ body {
   height: 100vh;
   margin: 0;
   position: relative;
-  background: url("../img/pozadina3.jpg");
+  background: url("../img/ribolov1.jpg");
   background-origin: border-box;
   background-size: cover;
   //   background-size: 100% 100%;
   //   border: 5px solid rgba(0, 255, 0, 0.6);
   border: 5px solid $primaryGreen;
-  #logo {
-    position: relative;
-    opacity: 0.9;
-    top: -2rem;
-    margin: auto;
-    background: url("../img/logo.png") no-repeat center center;
-    background-size: 80% 70%;
-    width: 600px;
-    height: 280px;
-    transition: all 0.5s ease-in-out 0.1s;
-    animation-name: senkaLogo;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    z-index: 3;
-    &:hover {
-      transform: scale(1.07);
-    }
-  }
-  @keyframes senkaLogo {
-    0% {
-      filter: drop-shadow(0 0 8px rgba($primaryGreen, 0.5));
-    }
-    50% {
-      filter: drop-shadow(0 0 15px rgba($primaryGreen, 0.7));
-    }
-    100% {
-      filter: drop-shadow(0 0 8px rgba($primaryGreen, 0.5));
-    }
-  }
-
-  #nadnaslov {
-    position: relative;
-    top: 1rem;
-    text-align: center;
-    font-size: 45px;
-    text-shadow: 1px 1px 3px rgba($primaryGray, 0.6);
-    font-weight: bolder;
-    color: $primaryBlack;
-    z-index: 3;
-  }
-
-  #podnaslov {
-    position: relative;
-    top: -2rem;
-    text-align: center;
-    font-size: 40px;
-    text-shadow: 5px 5px 5px $primaryBlack;
-    font-weight: bold;
-    color: $primaryGray;
-    z-index: 3;
-  }
-
-  .button {
-    position: relative;
-    top: 1rem;
-    background: rgba($primaryBlack, 0.6);
-    border-width: 2px;
-    border-color: rgba($primaryGray, 0.8);
-    border-style: solid;
-    border-radius: 25px;
-    text-align: center;
-    width: 200px;
-    height: 45px;
-    margin: auto;
-    transition: all 0.4s ease-in-out;
-    padding-top: 10px;
-    z-index: 3;
-    animation: senkaDugme 5s infinite;
-    a {
-      position: relative;
-      bottom: 10%;
-      text-decoration: none;
-      color: rgba($primaryGray, 0.9);
-      margin: auto;
-      font-weight: bold;
-      font-size: 20px;
-      text-shadow: 2px 2px 5px $primaryBlack;
-    }
-    &:hover {
-      color: white;
-      border-color: white;
-      background-color: rgba($primaryGray, 0.2);
-      width: 220px;
-    }
-  }
-  @keyframes senkaDugme {
-    50% {
-      box-shadow: 0px 0px 10px rgba($primaryGray, 0.6);
-    }
-  }
-
-  #social-media {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(
-      360deg,
-      rgba($primaryBlack, 0.3),
-      rgba($primaryBlack, 0.5)
-    );
-    // color: rgba($primaryGreen, 0.6);
-    color: $primaryGray;
+  #hero-content {
     width: 100%;
-    height: 60px;
-    z-index: 4;
-    div {
-      a {
-        color: inherit;
-        font-size: 35px;
-        /* padding-right: 50px; */
-        z-index: 4;
-        cursor: pointer;
-        text-shadow: 0px 0px 3px rgba($primaryGreen, 0.4);
-        transition: all 0.3s ease-in;
-        &:hover {
-          color: rgba($primaryGreen, 0.8);
-          font-size: 45px;
-          text-shadow: 0px 0px 2px rgba($primaryGray, 0.3);
-        }
+    margin-top: 5rem;
+    #logo {
+      position: relative;
+      opacity: 0.9;
+      top: -1rem;
+      margin: auto;
+      background: url("../img/topsetplus.png") no-repeat center center;
+      background-size: 80% 50%;
+      max-width: 450px;
+      height: 280px;
+      max-height: auto;
+      transition: all 0.5s ease-in-out 0.1s;
+      animation-name: senkaLogo;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      z-index: 3;
+      &:hover {
+        transform: scale(1.07);
       }
+    }
+    @keyframes senkaLogo {
+      0% {
+        filter: drop-shadow(0 0 8px rgba($primaryGreen, 0.5));
+      }
+      50% {
+        filter: drop-shadow(0 0 15px rgba($primaryGreen, 0.7));
+      }
+      100% {
+        filter: drop-shadow(0 0 8px rgba($primaryGreen, 0.5));
+      }
+    }
+
+    #nadnaslov {
+      @include naslov;
+      top: 3rem;
+      text-shadow: 1px 1px 3px rgba($primaryGray, 0.6);
+      color: $primaryBlack;
+      letter-spacing: 2px;
+    }
+
+    #podnaslov {
+      @include naslov;
+      top: -3rem;
+      text-shadow: 5px 5px 5px $primaryBlack;
+      color: $primaryGray;
     }
   }
 }
 
 /* HERO END */
-.text {
-  color: white;
-  position: relative;
-  top: -1rem;
-  text-align: center;
-  font-size: 30px;
-  transition: transform 0.5s;
-}
 
 /* FOG START */
 .fog-container {
@@ -171,7 +172,7 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: 1;
-  opacity: 0.6;
+  opacity: 0.7;
   .fog-img {
     position: absolute;
     height: 100vh;
@@ -179,14 +180,14 @@ body {
     z-index: 2;
   }
   .fog-img-first {
-    background: url("../img/fog-1.png");
+    background: url("../img/ribolov2.png");
     background-repeat: repeat-x;
     background-size: contain;
     background-position: center;
     animation: magla 100s linear infinite;
   }
   .fog-img-second {
-    background: url("../img/fog-2.png");
+    background: url("../img/ribolov3.png");
     background-repeat: repeat-x;
     background-size: contain;
     background-position: center;
@@ -206,162 +207,121 @@ body {
 
 /* NAVBAR START */
 .navbar {
+  @include flexin;
+  flex-wrap: wrap;
+  gap: 2%;
   box-sizing: border-box;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   bottom: 0;
-  width: 99.3%;
-  height: 80px;
-  margin: 0;
-  margin-left: 6px;
+  width: 100%;
+  border: 5px solid rgb(0, 204, 102);
+  border-top: 0px;
   background: linear-gradient(
     360deg,
     rgba($primaryBlack, 0.3),
     rgba($primaryBlack, 0.5)
   );
-
-  padding-top: 10px;
-  transition: all 2s ease-in-out;
+  padding: 7px 0px 7px 0px;
+  transition: all 0.5s ease-in-out;
   z-index: 5;
-  .items {
-    padding-left: 20%;
-    margin-top: 0;
-    justify-content: space-between;
-    width: 60%;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  li {
-    position: relative;
-    display: inline-block;
-    color: white;
-    width: 200px;
-    height: 45px;
-    border: 2px solid rgba($primaryGray, 0.8);
-    border-radius: 25px;
-    // padding-bottom: 0px;
-    text-shadow: 3px 3px 6px $primaryBlack;
-    transition: all 0.4s ease-in-out;
-    background: linear-gradient(
-      360deg,
-      rgba($primaryGreen, 0.5),
-      rgba($primaryGreen, 0.7)
-    );
-    z-index: 4;
-    &:hover {
-      border-color: white;
-      background-color: rgba($primaryGray, 0.4);
-      width: 220px;
-    }
-    &:first-child {
-      margin-left: 0px;
-    }
-    .nav-link {
-      position: relative;
-      z-index: 4;
-      color: inherit;
-      text-decoration: none;
-    }
-  }
 }
 .scroll {
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 0, 0.7));
-  //   background: linear-gradient(
-  //     360deg,
-  //     rgba($primaryBlack, 0.5),
-  //     rgba($primaryGreen, 0.7)
-  //   );
-  width: 100%;
-  margin-left: 0px;
-  transition: all 1s ease-in-out;
+  border: 0px;
+  transition: all 0.5s ease-in-out;
 }
 
 /* NAVBAR END */
+.main {
+}
 
 /* ABOUT US START */
 #about {
-  padding: 3%;
-  padding-left: 20%;
-  padding-right: 20%;
+  position: relative;
+  padding: 5% 20% 5% 20%;
   background: linear-gradient(
     360deg,
     rgba($primaryBlack, 0.1),
     rgba($primaryBlack, 0.3)
   );
   #about-section {
-    display: inline-flex;
-    align-content: center;
-    align-items: flex-start;
-    max-height: 400px;
+    @include flexin;
+    // flex: 0 1 100%;
+    // flex-wrap: wrap;
+    position: inherit;
+    gap: 5%;
+    // max-height: 400px;
     #about-img {
-      margin-top: 2%;
-      width: 50%;
-      height: 350px;
-      box-shadow: 0px 0px 15px rgba($primaryBlack, 0.6);
-      border-radius: 5%;
-      opacity: 0.9;
+      position: relative;
+      height: auto;
+      max-width: 70%;
+      max-height: 350px;
+      box-shadow: 10px 5px 10px rgba($primaryBlack, 0.5);
+      // border-radius: 5%;
+      border-right: 10px solid rgba(white, 0.8);
+      border-top: 5px solid $primaryGreen;
+      border-bottom: 20px solid $primaryGray;
+      z-index: 3;
     }
     #about-us {
-      height: 400px;
-      flex-wrap: wrap;
+      // height: 400px;
+      position: relative;
+      left: 66px;
+      top: -17.5px;
+      z-index: 2;
+      padding: 0px 35px 35px 50px;
       color: rgba($primaryBlack, 0.8);
+      border: 20px solid $primaryGray;
       #about-title {
-        text-align: center;
-        font-size: 40px;
+        // text-align: center;
+        font-size: 2em;
         font-weight: bolder;
         margin-top: 2px;
         text-shadow: 3px 3px 5px rgba($primaryBlack, 0.5);
         margin-bottom: 20px;
         .rec {
           color: rgba(255, 255, 255, 0.9);
-          text-shadow: 2px 2px 7px rgba($primaryBlack, 0.7);
+          text-shadow: 5px 5px 2px rgba($primaryBlack, 0.5);
         }
       }
       #about-title-small {
         position: relative;
-        left: 300px;
+        left: 200px;
         color: rgba($primaryBlack, 0.8);
-        font-size: 30px;
+        font-size: 2rem;
         font-weight: bolder;
         margin-bottom: 2px;
-        text-shadow: 5px 5px 8px rgba($primaryBlack, 0.3);
+        text-shadow: 10px 5px 3px rgba($primaryBlack, 0.3);
+        z-index: 4;
       }
       #about-p {
-        padding-right: 100px;
+        // padding-right: 100px;
         margin-top: 0;
         margin-bottom: 20px;
       }
       #h-line1 {
-        border: 3px solid rgba($primaryGreen, 0.7);
-        background-color: rgba($primaryGreen, 0.7);
-        box-shadow: 0px 0px 7px rgba($primaryBlack, 0.2);
         position: relative;
-        left: 240px;
+        border: 2px solid $primaryGreen;
+        background-color: $primaryGreen;
+        // box-shadow: 0px 0px 7px rgba($primaryBlack, 0.2);
+        left: 100px;
         z-index: 3;
-        width: 65%;
+        width: 70%;
       }
-      //   #h-line2 {
-      //     border: 3px solid rgba($primaryBlack, 0.5);
-      //     background-color: rgba($primaryBlack, 0.7);
-      //     box-shadow: 0px 0px 7px rgba($primaryGray, 0.4);
-      //     position: relative;
-      //     left: -30px;
-      //     top: -20px;
-      //     z-index: 3;
-      //     width: 10%;
-      //   }
       #h-line3 {
         border: 3px solid rgba(255, 255, 255, 0.7);
         background-color: rgba(255, 255, 255, 0.7);
         box-shadow: 0px 0px 7px rgba($primaryBlack, 0.2);
         position: relative;
-        width: 70%;
-        left: 20px;
+        width: 100%;
+        z-index: 3;
+        left: -100px;
       }
     }
+  }
+  #about-section > * {
+    flex: 0 1 40%;
   }
 }
 
