@@ -50,8 +50,8 @@ $primaryGray: rgb(206, 204, 204);
     letter-spacing: 1px;
     background: linear-gradient(
       360deg,
-      rgba($primaryGreen, 0.5),
-      rgba($primaryGreen, 0.7)
+      rgba($primaryGreen, 0.7),
+      rgba($primaryGreen, 0.9)
     );
     border: 2px solid rgba(white, 0.8);
     text-shadow: 0px 0px 10px $primaryBlack;
@@ -227,48 +227,44 @@ body {
   z-index: 5;
 }
 .scroll {
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 0, 0.7));
+  // background: linear-gradient(360deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 0, 0.7));
+  background: rgba($primaryGreen, 0.5);
+  backdrop-filter: blur(8px);
   border: 0px;
   transition: all 0.5s ease-in-out;
 }
 
 /* NAVBAR END */
-.main {
-}
 
 /* ABOUT US START */
 #about {
   position: relative;
-  padding: 5% 20% 5% 20%;
+  padding: 7% 20% 5% 20%;
   background: linear-gradient(
     360deg,
-    rgba($primaryBlack, 0.1),
+    rgba($primaryGray, 0.1),
     rgba($primaryBlack, 0.3)
   );
   #about-section {
     @include flexin;
-    // flex: 0 1 100%;
-    // flex-wrap: wrap;
     position: inherit;
     gap: 5%;
-    // max-height: 400px;
     #about-img {
       position: relative;
       height: auto;
       max-width: 70%;
       max-height: 350px;
       box-shadow: 10px 5px 10px rgba($primaryBlack, 0.5);
-      // border-radius: 5%;
-      border-right: 10px solid rgba(white, 0.8);
+      // border-right: 10px solid rgba(white, 0.8);
       border-top: 5px solid $primaryGreen;
-      border-bottom: 20px solid $primaryGray;
+      // border-bottom: 20px solid $primaryGray;
       z-index: 3;
     }
     #about-us {
       // height: 400px;
       position: relative;
-      left: 66px;
-      top: -17.5px;
+      left: 65.5px;
+      top: -26.5px;
       z-index: 2;
       padding: 0px 35px 35px 50px;
       color: rgba($primaryBlack, 0.8);
@@ -278,7 +274,7 @@ body {
         font-size: 2em;
         font-weight: bolder;
         margin-top: 2px;
-        text-shadow: 3px 3px 5px rgba($primaryBlack, 0.5);
+        text-shadow: 3px 3px 5px rgba($primaryBlack, 0.3);
         margin-bottom: 20px;
         .rec {
           color: rgba(255, 255, 255, 0.9);
@@ -292,7 +288,7 @@ body {
         font-size: 2rem;
         font-weight: bolder;
         margin-bottom: 2px;
-        text-shadow: 10px 5px 3px rgba($primaryBlack, 0.3);
+        text-shadow: 10px 5px 3px rgba($primaryBlack, 0.2);
         z-index: 4;
       }
       #about-p {
@@ -320,9 +316,103 @@ body {
       }
     }
   }
-  #about-section > * {
-    flex: 0 1 40%;
+}
+/* ABOUT US END */
+
+// SLIDER HEADER START
+.slider-header {
+  border-top: 20px solid $primaryGreen;
+  text-align: center;
+  width: 100%;
+  background-color: rgba($primaryGreen, 0.8);
+  padding-top: 3rem;
+
+  h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin: 0;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(black, 0.5);
+    letter-spacing: 1px;
+  }
+  p {
+    margin: 0;
+    color: rgba($primaryBlack, 0.8);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(white, 0.3);
+    padding-bottom: 1rem;
   }
 }
+// SLIDER HEADER END
+.container {
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(
+    360deg,
+    rgba($primaryBlack, 0.5),
+    rgba($primaryGreen, 0.8)
+  );
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 5px solid rgba(white, 0.8);
 
-/* ABOUT US END */
+  .box {
+    width: 350px;
+    height: 450px;
+    background: rgba(white, 0.5);
+    backdrop-filter: blur(0.5);
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba($primaryBlack, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    transition: all ease 0.3s;
+  }
+  .heading {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 3px 3px 5px rgba($primaryBlack, 0.7);
+  }
+  .model {
+    height: 350px;
+    max-height: 100%;
+    max-width: 100%;
+    // border: 5px 0px 5px 0px solid rgba($primaryBlack, 0.4);
+  }
+  .details {
+    p {
+      // font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+.box:hover {
+  background: rgba(white, 0.9);
+  transform-style: preserve-3d;
+  transform: scale(1.02);
+  transition: all ease 0.3s;
+}
+
+@media (max-width: 720px) {
+  .box {
+    width: 94%;
+    height: 290px;
+    .model {
+      height: 250px;
+    }
+    .details {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+// SLIDER IMAGE START
+
+// SLIDER IMAGE END
