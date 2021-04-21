@@ -17,8 +17,8 @@
   -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.2);
           box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.2);
   text-shadow: 0px 0px 10px rgba(5, 5, 5, 0.5);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-animation: senkaDugme 5s infinite;
           animation: senkaDugme 5s infinite;
 }
@@ -26,16 +26,18 @@
 .btn__black:hover {
   color: white;
   border-color: white;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   background-color: rgba(206, 204, 204, 0.2);
 }
 
 .btn__green {
   font-size: 1.7em;
   letter-spacing: 1px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 204, 102, 0.7)), to(rgba(0, 204, 102, 0.9)));
-  background: linear-gradient(360deg, rgba(0, 204, 102, 0.7), rgba(0, 204, 102, 0.9));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(9, 129, 74, 0.7)), to(rgba(9, 129, 74, 0.9)));
+  background: linear-gradient(360deg, rgba(9, 129, 74, 0.7), rgba(9, 129, 74, 0.9));
   border: 2px solid rgba(255, 255, 255, 0.8);
-  text-shadow: 0px 0px 10px #050505;
+  text-shadow: 0px 0px 5px #050505;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -48,6 +50,30 @@
   color: white;
   border-color: white;
   background-color: rgba(206, 204, 204, 0.2);
+}
+
+.btn__action_green {
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  background: #09814a;
+  border: 2px solid #cecccc;
+  text-shadow: 0px 0px 5px #050505;
+  -webkit-box-shadow: 0px 0px 5px #050505;
+          box-shadow: 0px 0px 5px #050505;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn__action_green:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.2);
+          box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: white;
+  border-color: white;
+  background-color: rgba(9, 129, 74, 0.8);
+  -webkit-box-shadow: 0px 0px 15px #050505;
+          box-shadow: 0px 0px 15px #050505;
 }
 
 @-webkit-keyframes senkaDugme {
@@ -112,7 +138,7 @@ body {
   background: url("../img/ribolov1.jpg");
   background-origin: border-box;
   background-size: cover;
-  border: 5px solid #00cc66;
+  border: 5px solid #09814a;
 }
 
 .kutija #hero-content {
@@ -148,50 +174,51 @@ body {
 
 @-webkit-keyframes senkaLogo {
   0% {
-    -webkit-filter: drop-shadow(0 0 8px rgba(0, 204, 102, 0.5));
-            filter: drop-shadow(0 0 8px rgba(0, 204, 102, 0.5));
+    -webkit-filter: drop-shadow(0 0 8px rgba(9, 129, 74, 0.5));
+            filter: drop-shadow(0 0 8px rgba(9, 129, 74, 0.5));
   }
   50% {
-    -webkit-filter: drop-shadow(0 0 15px rgba(0, 204, 102, 0.7));
-            filter: drop-shadow(0 0 15px rgba(0, 204, 102, 0.7));
+    -webkit-filter: drop-shadow(0 0 15px rgba(9, 129, 74, 0.7));
+            filter: drop-shadow(0 0 15px rgba(9, 129, 74, 0.7));
   }
   100% {
-    -webkit-filter: drop-shadow(0 0 8px rgba(0, 204, 102, 0.5));
-            filter: drop-shadow(0 0 8px rgba(0, 204, 102, 0.5));
+    -webkit-filter: drop-shadow(0 0 8px rgba(9, 129, 74, 0.5));
+            filter: drop-shadow(0 0 8px rgba(9, 129, 74, 0.5));
   }
 }
 
 @keyframes senkaLogo {
   0% {
-    -webkit-filter: drop-shadow(0 0 8px rgba(0, 204, 102, 0.5));
-            filter: drop-shadow(0 0 8px rgba(0, 204, 102, 0.5));
+    -webkit-filter: drop-shadow(0 0 8px rgba(9, 129, 74, 0.5));
+            filter: drop-shadow(0 0 8px rgba(9, 129, 74, 0.5));
   }
   50% {
-    -webkit-filter: drop-shadow(0 0 15px rgba(0, 204, 102, 0.7));
-            filter: drop-shadow(0 0 15px rgba(0, 204, 102, 0.7));
+    -webkit-filter: drop-shadow(0 0 15px rgba(9, 129, 74, 0.7));
+            filter: drop-shadow(0 0 15px rgba(9, 129, 74, 0.7));
   }
   100% {
-    -webkit-filter: drop-shadow(0 0 8px rgba(0, 204, 102, 0.5));
-            filter: drop-shadow(0 0 8px rgba(0, 204, 102, 0.5));
+    -webkit-filter: drop-shadow(0 0 8px rgba(9, 129, 74, 0.5));
+            filter: drop-shadow(0 0 8px rgba(9, 129, 74, 0.5));
   }
 }
 
 .kutija #hero-content #nadnaslov {
   position: relative;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  z-index: 3;
   top: 3rem;
   text-shadow: 1px 1px 3px rgba(206, 204, 204, 0.6);
   color: #050505;
-  letter-spacing: 2px;
 }
 
 .kutija #hero-content #podnaslov {
   position: relative;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  z-index: 3;
   top: -3rem;
   text-shadow: 5px 5px 5px #050505;
   color: #cecccc;
@@ -205,7 +232,9 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: 1;
-  opacity: 0.7;
+  opacity: 0.6;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   /* FOG END */
 }
 
@@ -282,18 +311,15 @@ body {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0.3)), to(rgba(5, 5, 5, 0.5)));
   background: linear-gradient(360deg, rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0.5));
   padding: 7px 0px 7px 0px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   z-index: 5;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 .scroll {
-  background: rgba(0, 204, 102, 0.5);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   border: 0px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 /* NAVBAR END */
@@ -326,7 +352,7 @@ body {
   max-height: 350px;
   -webkit-box-shadow: 10px 5px 10px rgba(5, 5, 5, 0.5);
           box-shadow: 10px 5px 10px rgba(5, 5, 5, 0.5);
-  border-top: 5px solid #00cc66;
+  border-top: 5px solid #09814a;
   z-index: 3;
 }
 
@@ -371,8 +397,8 @@ body {
 
 #about #about-section #about-us #h-line1 {
   position: relative;
-  border: 2px solid #00cc66;
-  background-color: #00cc66;
+  border: 2px solid #09814a;
+  background-color: #09814a;
   left: 100px;
   z-index: 3;
   width: 70%;
@@ -391,19 +417,19 @@ body {
 
 /* ABOUT US END */
 .slider-header {
-  border-top: 20px solid #00cc66;
   text-align: center;
   width: 100%;
-  background-color: rgba(0, 204, 102, 0.8);
-  padding-top: 3rem;
+  background-color: rgba(206, 204, 204, 0.1);
+  padding-top: 5rem;
 }
 
 .slider-header h1 {
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0;
-  color: white;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  color: #09814a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
 }
 
@@ -413,34 +439,35 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+  text-shadow: 2px 2px 4px rgba(206, 204, 204, 0.3);
   padding-bottom: 1rem;
 }
 
 .container {
   width: 100%;
   height: 70vh;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0.5)), to(rgba(0, 204, 102, 0.8)));
-  background: linear-gradient(360deg, rgba(5, 5, 5, 0.5), rgba(0, 204, 102, 0.8));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(9, 129, 74, 0.8)), to(rgba(206, 204, 204, 0.1)));
+  background: linear-gradient(360deg, rgba(9, 129, 74, 0.8), rgba(206, 204, 204, 0.1));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 1rem;
-  border-top: 5px solid rgba(255, 255, 255, 0.8);
+  color: rgba(5, 5, 5, 0.8);
+  text-shadow: 3px 3px 0px rgba(206, 204, 204, 0.7);
 }
 
 .container .box {
+  border: 1px solid #09814a;
   width: 350px;
   height: 450px;
   background: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(0.5);
           backdrop-filter: blur(0.5);
   border-radius: 10px;
-  -webkit-box-shadow: 2px 10px 12px rgba(5, 5, 5, 0.5);
-          box-shadow: 2px 10px 12px rgba(5, 5, 5, 0.5);
+  -webkit-box-shadow: 2px 5px 5px rgba(5, 5, 5, 0.5);
+          box-shadow: 2px 5px 5px rgba(5, 5, 5, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,8 +490,6 @@ body {
 .container .heading {
   font-weight: bold;
   font-size: 1.5rem;
-  color: white;
-  text-shadow: 3px 3px 5px rgba(5, 5, 5, 0.7);
 }
 
 .container .model {
@@ -485,6 +510,12 @@ body {
           transform: scale(1.02);
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
+  border: 1px solid #050505;
+}
+
+.box:hover .heading {
+  color: #09814a;
+  text-shadow: 2px 2px 3px rgba(5, 5, 5, 0.2);
 }
 
 @media (max-width: 720px) {
@@ -498,5 +529,85 @@ body {
   .box .details p {
     font-size: 16px;
   }
+}
+
+.katalog-section {
+  background: -webkit-gradient(linear, left bottom, left top, from(#fbfcf9), color-stop(rgba(9, 129, 74, 0.2)), to(rgba(9, 129, 74, 0.8)));
+  background: linear-gradient(360deg, #fbfcf9, rgba(9, 129, 74, 0.2), rgba(9, 129, 74, 0.8));
+  text-align: center;
+}
+
+.katalog-section .katalog-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 5rem;
+}
+
+.katalog-section .katalog-header h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+  color: rgba(5, 5, 5, 0.9);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.2);
+}
+
+.katalog-section .katalog-header p {
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0px rgba(5, 5, 5, 0.5);
+  padding-bottom: 1rem;
+}
+
+.katalog-section .katalog-header p a {
+  -webkit-text-decoration-color: #09814a;
+          text-decoration-color: #09814a;
+  color: white;
+  text-shadow: 2px 2px 0px rgba(5, 5, 5, 0.5);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.katalog-section .katalog-header p a:hover {
+  text-shadow: 2px 2px 5px #050505;
+}
+
+.katalog-section .katalog {
+  width: 60%;
+  height: 70vh;
+  border-top: 10px solid #09814a;
+}
+
+.contact-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(9, 129, 74, 0.2)), color-stop(rgba(206, 204, 204, 0.8)), to(#fbfcf9));
+  background: linear-gradient(360deg, rgba(9, 129, 74, 0.2), rgba(206, 204, 204, 0.8), #fbfcf9);
+}
+
+.contact-section .contact-header {
+  padding-top: 3rem;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

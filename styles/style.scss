@@ -2,7 +2,8 @@
 
 $primaryFont: "Roboto", sans-serif;
 
-$primaryGreen: rgb(0, 204, 102);
+// $primaryGreen: rgb(0, 204, 102);
+$primaryGreen: #09814a;
 $primaryBlack: rgb(5, 5, 5);
 $primaryGray: rgb(206, 204, 204);
 
@@ -15,8 +16,9 @@ $primaryGray: rgb(206, 204, 204);
 @mixin naslov {
   position: relative;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  z-index: 3;
 }
 
 .btn {
@@ -35,11 +37,13 @@ $primaryGray: rgb(206, 204, 204);
     border: 2px solid rgba($primaryGray, 0.8);
     box-shadow: 0px 0px 10px rgba($primaryGray, 0.2);
     text-shadow: 0px 0px 10px rgba($primaryBlack, 0.5);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
     animation: senkaDugme 5s infinite;
     &:hover {
       color: white;
       border-color: white;
+      transform: scale(1.05);
+
       background-color: rgba($primaryGray, 0.2);
       // width: 4em;
     }
@@ -54,7 +58,7 @@ $primaryGray: rgb(206, 204, 204);
       rgba($primaryGreen, 0.9)
     );
     border: 2px solid rgba(white, 0.8);
-    text-shadow: 0px 0px 10px $primaryBlack;
+    text-shadow: 0px 0px 5px $primaryBlack;
     transition: all 0.3s ease-out;
     &:hover {
       box-shadow: 0px 0px 10px rgba($primaryGray, 0.2);
@@ -62,6 +66,23 @@ $primaryGray: rgb(206, 204, 204);
       color: white;
       border-color: white;
       background-color: rgba($primaryGray, 0.2);
+    }
+  }
+  &__action_green {
+    font-size: 1.7em;
+    letter-spacing: 1px;
+    background: $primaryGreen;
+    border: 2px solid $primaryGray;
+    text-shadow: 0px 0px 5px $primaryBlack;
+    box-shadow: 0px 0px 5px $primaryBlack;
+    transition: all 0.3s ease-out;
+    &:hover {
+      box-shadow: 0px 0px 10px rgba($primaryGray, 0.2);
+      transform: scale(1.05);
+      color: white;
+      border-color: white;
+      background-color: rgba($primaryGreen, 0.8);
+      box-shadow: 0px 0px 15px $primaryBlack;
     }
   }
 }
@@ -151,7 +172,7 @@ body {
       top: 3rem;
       text-shadow: 1px 1px 3px rgba($primaryGray, 0.6);
       color: $primaryBlack;
-      letter-spacing: 2px;
+      // letter-spacing: 2px;
     }
 
     #podnaslov {
@@ -172,7 +193,8 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: 1;
-  opacity: 0.7;
+  opacity: 0.6;
+  backdrop-filter: blur(3px);
   .fog-img {
     position: absolute;
     height: 100vh;
@@ -223,15 +245,16 @@ body {
     rgba($primaryBlack, 0.5)
   );
   padding: 7px 0px 7px 0px;
-  transition: all 0.5s ease-in-out;
+  // transition: all 0.3s ease;
   z-index: 5;
+  backdrop-filter: blur(8px);
 }
 .scroll {
   // background: linear-gradient(360deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 0, 0.7));
-  background: rgba($primaryGreen, 0.5);
+  // background: rgba($primaryGreen, 0.5);
   backdrop-filter: blur(8px);
   border: 0px;
-  transition: all 0.5s ease-in-out;
+  // transition: all 0.3s ease;
 }
 
 /* NAVBAR END */
@@ -321,18 +344,21 @@ body {
 
 // SLIDER HEADER START
 .slider-header {
-  border-top: 20px solid $primaryGreen;
+  // border-top: 10px solid $primaryGreen;
   text-align: center;
   width: 100%;
-  background-color: rgba($primaryGreen, 0.8);
-  padding-top: 3rem;
+  background-color: rgba($primaryGray, 0.1);
+  padding-top: 5rem;
 
   h1 {
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 0;
-    color: white;
-    text-shadow: 3px 3px 5px rgba(black, 0.5);
+    color: $primaryGreen;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-shadow: 2px 2px 3px rgba(black, 0.5);
+
     letter-spacing: 1px;
   }
   p {
@@ -341,7 +367,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(white, 0.3);
+    text-shadow: 2px 2px 4px rgba($primaryGray, 0.3);
     padding-bottom: 1rem;
   }
 }
@@ -349,23 +375,32 @@ body {
 .container {
   width: 100%;
   height: 70vh;
+  // background: linear-gradient(
+  //   360deg,
+  //   rgba($primaryBlack, 0.5),
+  //   rgba($primaryGreen, 0.8)
+  // );
   background: linear-gradient(
     360deg,
-    rgba($primaryBlack, 0.5),
-    rgba($primaryGreen, 0.8)
+    rgba($primaryGreen, 0.8),
+    rgba($primaryGray, 0.1)
   );
+
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
-  border-top: 5px solid rgba(white, 0.8);
+  // padding-top: 1rem;
+  // border-top: 10px solid rgba(white, 0.9);
+  color: rgba($primaryBlack, 0.8);
+  text-shadow: 3px 3px 0px rgba($primaryGray, 0.7);
 
   .box {
+    border: 1px solid $primaryGreen;
     width: 350px;
     height: 450px;
     background: rgba(white, 0.5);
     backdrop-filter: blur(0.5);
     border-radius: 10px;
-    box-shadow: 2px 10px 12px rgba($primaryBlack, 0.5);
+    box-shadow: 2px 5px 5px rgba($primaryBlack, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -376,8 +411,8 @@ body {
   .heading {
     font-weight: bold;
     font-size: 1.5rem;
-    color: white;
-    text-shadow: 3px 3px 5px rgba($primaryBlack, 0.7);
+    // color: $primaryGreen;
+    // text-shadow: 2px 2px 3px rgba($primaryBlack, 0.2);
   }
   .model {
     height: 350px;
@@ -397,6 +432,14 @@ body {
   transform-style: preserve-3d;
   transform: scale(1.02);
   transition: all ease 0.3s;
+  border: 1px solid $primaryBlack;
+
+  .heading {
+    // color: rgba($primaryBlack, 0.8);
+    // text-shadow: 3px 3px 0px rgba($primaryGray, 0.7);
+    color: $primaryGreen;
+    text-shadow: 2px 2px 3px rgba($primaryBlack, 0.2);
+  }
 }
 
 @media (max-width: 720px) {
@@ -416,3 +459,73 @@ body {
 // SLIDER IMAGE START
 
 // SLIDER IMAGE END
+
+// KATALOG START
+.katalog-section {
+  background: linear-gradient(
+    360deg,
+    rgb(251, 252, 249),
+    rgba($primaryGreen, 0.2),
+    rgba($primaryGreen, 0.8)
+  );
+  text-align: center;
+
+  .katalog-header {
+    @include flexin;
+    flex-direction: column;
+    padding-top: 5rem;
+    h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin: 0;
+      color: rgba($primaryBlack, 0.9);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      text-shadow: 4px 4px 2px rgba(white, 0.2);
+    }
+    p {
+      margin: 0;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-shadow: 2px 2px 0px rgba($primaryBlack, 0.5);
+      padding-bottom: 1rem;
+      a {
+        text-decoration-color: $primaryGreen;
+        color: white;
+        text-shadow: 2px 2px 0px rgba($primaryBlack, 0.5);
+        transition: all 0.2s ease;
+        &:hover {
+          text-shadow: 2px 2px 5px $primaryBlack;
+        }
+      }
+    }
+  }
+  .katalog {
+    width: 60%;
+    height: 70vh;
+    border-top: 10px solid $primaryGreen;
+  }
+}
+// KATALOG END
+
+// CONTACT START
+.contact-section {
+  @include flexin;
+  background: linear-gradient(
+    360deg,
+    rgba($primaryGreen, 0.2),
+    rgba($primaryGray, 0.8),
+    rgb(251, 252, 249)
+  );
+  .contact-header {
+    padding-top: 3rem;
+    text-align: center;
+    h1 {
+    }
+    p {
+    }
+  }
+}
+// CONTACT END
