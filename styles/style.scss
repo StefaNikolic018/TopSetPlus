@@ -3,7 +3,7 @@
 $primaryFont: "Roboto", sans-serif;
 
 // $primaryGreen: rgb(0, 204, 102);
-$primaryGreen: #09814a;
+$primaryGreen: rgb(9, 129, 74);
 $primaryBlack: rgb(5, 5, 5);
 $primaryGray: rgb(206, 204, 204);
 
@@ -19,6 +19,47 @@ $primaryGray: rgb(206, 204, 204);
   font-size: 2.5rem;
   font-weight: 700;
   z-index: 3;
+}
+
+@mixin bg-text {
+  content: attr(data-bg-text);
+  display: block;
+  font-size: 125px;
+  line-height: 1;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 15px;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+// .bg-text0::after {
+//   @include bg-text;
+//   color: rgba($primaryBlack, 0.2);
+//   bottom: -25px;
+//   right: 110px;
+// }
+
+// .bg-text1::after {
+//   @include bg-text;
+//   color: rgba($primaryGray, 0.9);
+//   bottom: 45px;
+//   right: 395px;
+// }
+
+// .bg-text2::after {
+//   @include bg-text;
+//   color: rgba(white, 0.3);
+//   bottom: 45px;
+//   right: 395px;
+// }
+
+.bg-text3::after {
+  @include bg-text;
+  color: $primaryGreen;
+  bottom: 45px;
+  left: 115px;
 }
 
 .btn {
@@ -237,7 +278,7 @@ body {
   top: 0;
   bottom: 0;
   width: 100%;
-  border: 5px solid rgb(0, 204, 102);
+  border: 5px solid $primaryGreen;
   border-top: 0px;
   background: linear-gradient(
     360deg,
@@ -348,7 +389,8 @@ body {
   text-align: center;
   width: 100%;
   background-color: rgba($primaryGray, 0.1);
-  padding-top: 5rem;
+  padding-top: 6rem;
+  position: relative;
 
   h1 {
     font-weight: 700;
@@ -474,6 +516,8 @@ body {
     @include flexin;
     flex-direction: column;
     padding-top: 5rem;
+    position: relative;
+
     h1 {
       font-weight: 700;
       font-size: 3rem;
@@ -485,11 +529,11 @@ body {
     }
     p {
       margin: 0;
-      color: white;
+      color: rgba($primaryGreen, 0.4);
       text-transform: uppercase;
       font-weight: 700;
       font-size: 1.5rem;
-      text-shadow: 2px 2px 0px rgba($primaryBlack, 0.5);
+      text-shadow: 2px 2px 0px rgba($primaryBlack, 0.6);
       padding-bottom: 1rem;
       a {
         text-decoration-color: $primaryGreen;
@@ -513,18 +557,171 @@ body {
 // CONTACT START
 .contact-section {
   @include flexin;
+  flex-direction: column;
+
   background: linear-gradient(
     360deg,
-    rgba($primaryGreen, 0.2),
-    rgba($primaryGray, 0.8),
+    rgba($primaryGray, 0.9),
+    rgba($primaryGreen, 0.5),
     rgb(251, 252, 249)
   );
   .contact-header {
-    padding-top: 3rem;
+    padding-top: 10rem;
     text-align: center;
+    position: relative;
+
     h1 {
+      color: $primaryBlack;
+      text-shadow: 4px 4px 2px rgba(white, 0.5);
+      font-weight: 700;
+      font-size: 3rem;
+      z-index: 2;
+      margin-bottom: 0;
     }
     p {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-shadow: 4px 4px 5px rgba(black, 0.9);
+      padding-bottom: 1rem;
+      margin-top: 0;
+    }
+  }
+  .contact-body {
+    @include flexin;
+    flex: 1 1 100%;
+    text-align: center;
+    gap: 1%;
+    width: 50%;
+    padding-bottom: 2rem;
+    .contact-item {
+      background: rgba(white, 0.5);
+      backdrop-filter: blur(8px);
+      border: 2px solid $primaryBlack;
+      box-shadow: 2px 2px 5px rgba($primaryBlack, 0.6);
+      border-radius: 5%;
+      padding: 1em;
+      transition: all 0.2s ease;
+      h1 {
+        color: white;
+        font-size: 1.5em;
+        font-weight: 700;
+        text-shadow: 2px 2px 5px rgba($primaryBlack, 0.8);
+      }
+      p {
+        font-size: 1em;
+        text-shadow: 1px 1px 3px rgba($primaryBlack, 0.3);
+      }
+      a {
+        color: rgba($primaryGreen, 0.8);
+        background-color: rgba(white, 0.8);
+        transition: all 0.2s ease;
+        box-shadow: 2px 2px 5px rgba($primaryBlack, 0.6);
+
+        &:hover {
+          transform: scale(1.05);
+          color: $primaryGreen;
+          background-color: white;
+        }
+      }
+      &:hover {
+        background: rgba(white, 0.3);
+        border-radius: 10%;
+      }
+    }
+  }
+}
+
+.footer {
+  @include flexin;
+  flex-direction: column;
+  background: rgba($primaryBlack, 0.1);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 30vh;
+  .footer-first {
+    @include flexin;
+    flex: 1 1 100%;
+    width: 80%;
+    .footer-about {
+      width: 33.333%;
+      text-align: left;
+      border-left: 2px solid $primaryGray;
+      border-right: 2px solid $primaryGray;
+
+      p {
+        display: inline-block;
+      }
+      img {
+        display: inline-block;
+        max-width: 335px;
+        padding-left: 30px;
+      }
+    }
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 5%;
+      width: 33.333%;
+      text-align: left;
+      border-left: 2px solid $primaryGray;
+      border-right: 2px solid $primaryGray;
+      padding-left: 30px;
+      .footer-contact-item {
+        padding-bottom: 10px;
+        a {
+          font-size: 1.2rem;
+          color: rgba($primaryBlack, 0.7);
+          text-decoration: none;
+          position: relative;
+          top: -7px;
+          &:hover {
+            color: rgba($primaryGreen, 0.7);
+          }
+        }
+        .fas {
+          font-size: 2rem;
+        }
+        .fa-map-marker-alt {
+          padding-left: 5px;
+        }
+        .fa-mobile-alt {
+          padding-left: 7px;
+        }
+        .fa-at {
+          padding-left: 2px;
+        }
+      }
+    }
+    .footer-social {
+      width: 33.333%;
+      text-align: center;
+      font-size: 3rem;
+      a {
+        color: rgba($primaryBlack, 0.8);
+
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+          font-size: 3.1rem;
+          color: rgba($primaryGreen, 0.9);
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    width: 100%;
+    border-top: 2px solid $primaryGray;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    a {
+      color: rgba($primaryGreen, 0.9);
+      text-decoration: none;
+      &:hover {
+        color: rgba($primaryBlack, 0.8);
+      }
     }
   }
 }
