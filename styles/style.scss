@@ -2,9 +2,19 @@
 
 $primaryFont: "Roboto", sans-serif;
 
+// Pocetno
 // $primaryGreen: rgb(0, 204, 102);
+// PRIMARNO
 $primaryGreen: rgb(9, 129, 74);
+// Zelena kao siva
+// $primaryGreen: hsl(153, 40%, 27%);
+// Plavo
+// $primaryGreen: hsl(186, 83%, 16%);
+// Za maju
+// $primaryGreen: hsl(0, 0%, 30%);
+// BLACK
 $primaryBlack: rgb(5, 5, 5);
+// GRAY
 $primaryGray: rgb(206, 204, 204);
 
 @mixin flexin {
@@ -90,8 +100,27 @@ $primaryGray: rgb(206, 204, 204);
     }
   }
 
+  &__blackTwo {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    background: rgba($primaryBlack, 0.6);
+    border: 2px solid rgba($primaryGray, 0.8);
+    box-shadow: 0px 0px 10px rgba($primaryGray, 0.2);
+    text-shadow: 0px 0px 10px rgba($primaryBlack, 0.5);
+    transition: all 0.3s ease-in-out;
+    animation: senkaDugme 5s infinite;
+    &:hover {
+      color: white;
+      border-color: white;
+      transform: scale(1.05);
+
+      background-color: rgba($primaryGray, 0.2);
+      // width: 4em;
+    }
+  }
+
   &__green {
-    font-size: 1.7em;
+    font-size: 1.5em;
     letter-spacing: 1px;
     background: linear-gradient(
       360deg,
@@ -101,6 +130,7 @@ $primaryGray: rgb(206, 204, 204);
     border: 2px solid rgba(white, 0.8);
     text-shadow: 0px 0px 5px $primaryBlack;
     transition: all 0.3s ease-out;
+    text-transform: uppercase;
     &:hover {
       box-shadow: 0px 0px 10px rgba($primaryGray, 0.2);
       transform: scale(1.05);
@@ -124,6 +154,19 @@ $primaryGray: rgb(206, 204, 204);
       border-color: white;
       background-color: rgba($primaryGreen, 0.8);
       box-shadow: 0px 0px 15px $primaryBlack;
+    }
+  }
+
+  &__logo {
+    background-image: url("../img/topsetplus.png");
+    background-size: contain;
+    height: 45px;
+    width: 95px;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      transform: scale(1.05);
+      color: white;
     }
   }
 }
@@ -174,6 +217,33 @@ body {
   //   background-size: 100% 100%;
   //   border: 5px solid rgba(0, 255, 0, 0.6);
   border: 5px solid $primaryGreen;
+  #social-media {
+    background: linear-gradient(
+      360deg,
+      rgba($primaryBlack, 0.3),
+      rgba($primaryBlack, 0.5)
+    );
+    backdrop-filter: blur(8px);
+    text-align: center;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 3rem;
+    flex-direction: row;
+    .social-media-item {
+      .fas {
+        color: $primaryGreen;
+      }
+      a {
+        color: white;
+        text-shadow: 0px 0px 5px black;
+        text-decoration: none;
+      }
+    }
+  }
   #hero-content {
     width: 100%;
     margin-top: 5rem;
@@ -559,12 +629,7 @@ body {
   @include flexin;
   flex-direction: column;
 
-  background: linear-gradient(
-    360deg,
-    rgba($primaryGray, 0.9),
-    rgba($primaryGreen, 0.5),
-    rgb(251, 252, 249)
-  );
+  background: linear-gradient(360deg, $primaryGray, rgb(251, 252, 249));
   .contact-header {
     padding-top: 10rem;
     text-align: center;
@@ -613,7 +678,7 @@ body {
         text-shadow: 1px 1px 3px rgba($primaryBlack, 0.3);
       }
       a {
-        color: rgba($primaryGreen, 0.8);
+        color: rgba($primaryGreen, 0.9);
         background-color: rgba(white, 0.8);
         transition: all 0.2s ease;
         box-shadow: 2px 2px 5px rgba($primaryBlack, 0.6);
@@ -646,8 +711,8 @@ body {
     .footer-about {
       width: 33.333%;
       text-align: left;
-      border-left: 2px solid $primaryGray;
-      border-right: 2px solid $primaryGray;
+      border-left: 1px solid $primaryGreen;
+      border-right: 1px solid $primaryGreen;
 
       p {
         display: inline-block;
@@ -664,8 +729,8 @@ body {
       gap: 5%;
       width: 33.333%;
       text-align: left;
-      border-left: 2px solid $primaryGray;
-      border-right: 2px solid $primaryGray;
+      border-left: 1px solid $primaryGreen;
+      border-right: 1px solid $primaryGreen;
       padding-left: 30px;
       .footer-contact-item {
         padding-bottom: 10px;
@@ -711,7 +776,7 @@ body {
   }
   .footer-copyright {
     width: 100%;
-    border-top: 2px solid $primaryGray;
+    border-top: 1px solid $primaryGreen;
     text-align: center;
     font-size: 1.2rem;
     padding-bottom: 5px;

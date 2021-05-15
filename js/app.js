@@ -1,4 +1,6 @@
 var myNav = document.querySelector(".navbar");
+var logo = document.getElementById("navLogo");
+var katalog = document.getElementById("navKatalog");
 
 window.onscroll = function () {
   "use strict";
@@ -7,8 +9,12 @@ window.onscroll = function () {
     document.documentElement.scrollTop >= 40
   ) {
     myNav.classList.add("scroll");
+    logo.style.visibility = "visible";
+    katalog.style.visibility = "visible";
   } else {
     myNav.classList.remove("scroll");
+    logo.style.visibility = "hidden";
+    katalog.style.visibility = "hidden";
   }
 };
 
