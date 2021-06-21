@@ -227,6 +227,31 @@ body {
   text-decoration: none;
 }
 
+@media screen and (min-width: 360px) {
+  .kutija #social-media {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1em;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+  }
+  .kutija #social-media:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f142";
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-weight: 900;
+    border: 1px solid white;
+    border-radius: 25%;
+  }
+}
+
 .kutija #hero-content {
   width: 100%;
   margin-top: 5rem;
@@ -400,6 +425,12 @@ body {
   z-index: 5;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
+}
+
+@media screen and (min-width: 360px) {
+  .navbar {
+    display: none;
+  }
 }
 
 .scroll {
