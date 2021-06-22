@@ -243,7 +243,7 @@ body {
         text-decoration: none;
       }
     }
-    @media screen and (min-width: 360px) {
+    @media screen and (max-width: 414px) {
       flex-direction: column;
       font-size: 1em;
       position: sticky;
@@ -254,7 +254,8 @@ body {
         font-size: 2rem;
         color: white;
         position: absolute;
-        top: 30%;
+        padding: 5px;
+        top: 20%;
         left: 10%;
         font-weight: 900;
         border: 1px solid white;
@@ -377,7 +378,7 @@ body {
   // transition: all 0.3s ease;
   z-index: 5;
   backdrop-filter: blur(8px);
-  @media screen and (min-width: 360px) {
+  @media screen and (max-width: 414px) {
     display: none;
   }
 }

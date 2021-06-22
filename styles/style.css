@@ -227,7 +227,7 @@ body {
   text-decoration: none;
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (max-width: 414px) {
   .kutija #social-media {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -244,7 +244,8 @@ body {
     font-size: 2rem;
     color: white;
     position: absolute;
-    top: 30%;
+    padding: 5px;
+    top: 20%;
     left: 10%;
     font-weight: 900;
     border: 1px solid white;
@@ -427,7 +428,7 @@ body {
           backdrop-filter: blur(8px);
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (max-width: 414px) {
   .navbar {
     display: none;
   }
