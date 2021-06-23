@@ -15,6 +15,14 @@
   left: 115px;
 }
 
+@media screen and (max-width: 414px) {
+  .bg-text3::after {
+    font-size: 3.5rem;
+    bottom: 300px;
+    left: 10px;
+  }
+}
+
 .btn {
   display: inline-block;
   font-weight: 700;
@@ -24,6 +32,12 @@
   font-size: 2rem;
   border-radius: 25px;
   padding: 0.2em 1em;
+}
+
+@media screen and (max-width: 414px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
 
 .btn__black {
@@ -166,6 +180,14 @@
   z-index: 3;
 }
 
+@media screen and (max-width: 414px) {
+  .call-to-action #more {
+    position: relative;
+    top: -4.3rem;
+    font-size: 1.4rem;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   width: 100%;
@@ -193,6 +215,12 @@ body {
   background-origin: border-box;
   background-size: cover;
   border: 5px solid #09814a;
+}
+
+@media screen and (max-width: 414px) {
+  .kutija {
+    height: 104vh;
+  }
 }
 
 .kutija #social-media {
@@ -258,6 +286,12 @@ body {
   margin-top: 5rem;
 }
 
+@media screen and (max-width: 414px) {
+  .kutija #hero-content {
+    margin-top: 0px;
+  }
+}
+
 .kutija #hero-content #logo {
   position: relative;
   opacity: 0.9;
@@ -282,6 +316,13 @@ body {
 .kutija #hero-content #logo:hover {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
+}
+
+@media screen and (max-width: 414px) {
+  .kutija #hero-content #logo {
+    top: -3rem;
+    background-size: 80% 40%;
+  }
 }
 
 @-webkit-keyframes senkaLogo {
@@ -325,6 +366,18 @@ body {
   color: #050505;
 }
 
+@media screen and (max-width: 414px) {
+  .kutija #hero-content #nadnaslov {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .kutija #hero-content #nadnaslov {
+    top: 1rem;
+  }
+}
+
 .kutija #hero-content #podnaslov {
   position: relative;
   text-align: center;
@@ -334,6 +387,18 @@ body {
   top: -3rem;
   text-shadow: 5px 5px 5px #050505;
   color: #cecccc;
+}
+
+@media screen and (max-width: 414px) {
+  .kutija #hero-content #podnaslov {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .kutija #hero-content #podnaslov {
+    top: -7rem;
+  }
 }
 
 /* HERO END */
@@ -430,6 +495,15 @@ body {
 
 @media screen and (max-width: 414px) {
   .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .navbar {
     display: none;
   }
 }
@@ -449,6 +523,13 @@ body {
   background: linear-gradient(360deg, rgba(206, 204, 204, 0.1), rgba(5, 5, 5, 0.3));
 }
 
+@media screen and (max-width: 414px) {
+  #about {
+    position: static;
+    padding: 0px;
+  }
+}
+
 #about #about-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -463,6 +544,15 @@ body {
   gap: 5%;
 }
 
+@media screen and (max-width: 414px) {
+  #about #about-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #about #about-section #about-img {
   position: relative;
   height: auto;
@@ -474,6 +564,12 @@ body {
   z-index: 3;
 }
 
+@media screen and (max-width: 414px) {
+  #about #about-section #about-img {
+    display: none;
+  }
+}
+
 #about #about-section #about-us {
   position: relative;
   left: 65.5px;
@@ -482,6 +578,12 @@ body {
   padding: 0px 35px 35px 50px;
   color: rgba(5, 5, 5, 0.8);
   border: 20px solid #cecccc;
+}
+
+@media screen and (max-width: 414px) {
+  #about #about-section #about-us {
+    position: static;
+  }
 }
 
 #about #about-section #about-us #about-title {
@@ -508,9 +610,21 @@ body {
   z-index: 4;
 }
 
+@media screen and (max-width: 414px) {
+  #about #about-section #about-us #about-title-small {
+    position: static;
+  }
+}
+
 #about #about-section #about-us #about-p {
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 414px) {
+  #about #about-section #about-us #about-p {
+    margin-bottom: 25px;
+  }
 }
 
 #about #about-section #about-us #h-line1 {
@@ -522,6 +636,12 @@ body {
   width: 70%;
 }
 
+@media screen and (max-width: 414px) {
+  #about #about-section #about-us #h-line1 {
+    position: static;
+  }
+}
+
 #about #about-section #about-us #h-line3 {
   border: 3px solid rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.7);
@@ -531,6 +651,12 @@ body {
   width: 100%;
   z-index: 3;
   left: -100px;
+}
+
+@media screen and (max-width: 414px) {
+  #about #about-section #about-us #h-line3 {
+    display: none;
+  }
 }
 
 /* ABOUT US END */
@@ -674,6 +800,15 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 414px) {
+  .katalog-section .katalog-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .katalog-section .katalog-header h1 {
   font-weight: 700;
   font-size: 3rem;
@@ -730,6 +865,15 @@ body {
   background: linear-gradient(360deg, #cecccc, #fbfcf9);
 }
 
+@media screen and (max-width: 414px) {
+  .contact-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .contact-section .contact-header {
   padding-top: 10rem;
   text-align: center;
@@ -771,6 +915,15 @@ body {
   gap: 1%;
   width: 50%;
   padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 414px) {
+  .contact-section .contact-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .contact-section .contact-body .contact-item {
@@ -840,6 +993,22 @@ body {
   height: 30vh;
 }
 
+@media screen and (max-width: 414px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .footer img {
+    max-width: 40px;
+    padding-left: 0px;
+  }
+}
+
 .footer .footer-first {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -854,6 +1023,15 @@ body {
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
   width: 80%;
+}
+
+@media screen and (max-width: 414px) {
+  .footer .footer-first {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .footer .footer-first .footer-about {
@@ -871,6 +1049,13 @@ body {
   display: inline-block;
   max-width: 335px;
   padding-left: 30px;
+}
+
+@media screen and (max-width: 414px) {
+  .footer .footer-first .footer-about img {
+    max-width: 40px;
+    padding-left: 0px;
+  }
 }
 
 .footer .footer-first .footer-contact {
