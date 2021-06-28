@@ -59,6 +59,13 @@
   background-color: rgba(206, 204, 204, 0.2);
 }
 
+@media screen and (max-width: 864px) {
+  .btn__black {
+    position: relative;
+    top: -3rem;
+  }
+}
+
 .btn__blackTwo {
   font-size: 1.5em;
   letter-spacing: 1px;
@@ -144,31 +151,31 @@
 
 @-webkit-keyframes senkaDugme {
   0% {
-    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
-            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+    -webkit-box-shadow: 0px 0px 15px rgba(206, 204, 204, 0.4);
+            box-shadow: 0px 0px 15px rgba(206, 204, 204, 0.4);
   }
   50% {
-    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.8);
-            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.8);
+    -webkit-box-shadow: 0px 0px 20px rgba(206, 204, 204, 0.8);
+            box-shadow: 0px 0px 20px rgba(206, 204, 204, 0.8);
   }
   100% {
-    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
-            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+    -webkit-box-shadow: 0px 0px 15px rgba(206, 204, 204, 0.4);
+            box-shadow: 0px 0px 15px rgba(206, 204, 204, 0.4);
   }
 }
 
 @keyframes senkaDugme {
   0% {
-    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
-            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+    -webkit-box-shadow: 0px 0px 15px rgba(206, 204, 204, 0.4);
+            box-shadow: 0px 0px 15px rgba(206, 204, 204, 0.4);
   }
   50% {
-    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.8);
-            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.8);
+    -webkit-box-shadow: 0px 0px 20px rgba(206, 204, 204, 0.8);
+            box-shadow: 0px 0px 20px rgba(206, 204, 204, 0.8);
   }
   100% {
-    -webkit-box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
-            box-shadow: 0px 0px 10px rgba(206, 204, 204, 0.4);
+    -webkit-box-shadow: 0px 0px 15px rgba(206, 204, 204, 0.4);
+            box-shadow: 0px 0px 15px rgba(206, 204, 204, 0.4);
   }
 }
 
@@ -230,8 +237,6 @@ body {
 .kutija #social-media {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0.3)), to(rgba(5, 5, 5, 0.5)));
   background: linear-gradient(360deg, rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0.5));
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
   text-align: center;
   font-size: 1.2rem;
   display: -webkit-box;
@@ -325,7 +330,7 @@ body {
 @media screen and (max-width: 864px) {
   .kutija #hero-content #logo {
     top: -3rem;
-    background-size: 80% 40%;
+    background-size: 85% 50%;
   }
 }
 
@@ -401,7 +406,7 @@ body {
 
 @media screen and (max-width: 864px) {
   .kutija #hero-content #podnaslov {
-    top: -7rem;
+    top: -6rem;
   }
 }
 

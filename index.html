@@ -4,6 +4,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <link rel="stylesheet" type="text/css" href="./styles/lightslider.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TopSet plus feeder hranilice i oprema za ribolov</title>
@@ -72,7 +73,15 @@
     <!-- NAVBAR START -->
     <div class="navbar">
       <!-- <ul class="items"> -->
-      <a class="btn btn__logo" id="navLogo" href="#kutija" style="visibility: hidden;"></a>
+      <a
+        class="btn btn__logo"
+        id="navLogo"
+        href="#kutija"
+        style="visibility: hidden;"
+        data-aos="fade-in"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      ></a>
 
       <!-- <li> -->
       <a class="btn btn__green" href="#about">O nama</a>
@@ -84,7 +93,14 @@
       <a class="btn btn__green" href="#contact">Kontakt</a>
       <!-- </li> -->
 
-      <a class="btn btn__blackTwo" id="navKatalog" href="#katalog" style="visibility: hidden;"
+      <a
+        class="btn btn__blackTwo"
+        id="navKatalog"
+        href="#katalog"
+        style="visibility: hidden;"
+        data-aos="fade-in"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
         >Katalog</a
       >
 
@@ -94,7 +110,13 @@
     <div class="main">
       <div id="about">
         <div id="about-section">
-          <div id="about-us">
+          <div
+            id="about-us"
+            data-aos="fade-right"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <h1 id="about-title-small" class="bg-text0" data-bg-text="O NAMA">
               O nama
             </h1>
@@ -117,23 +139,45 @@
             id="about-img"
             src="img/wordpress/hranilice1.webp"
             alt="feeders"
+            data-aos="fade-right"
+            data-aos-delay="50"
           />
         </div>
         <div class="call-to-action">
-          <a href="#contact" class="btn btn__action_green" id="more"
+          <a
+            href="#contact"
+            class="btn btn__action_green"
+            id="more"
+            data-aos="fade-in"
+            data-aos-delay="50"
             >SAZNAJ VIŠE</a
           >
         </div>
       </div>
       <!-- SLIDER HEADER START -->
       <div class="slider-header" id="gallery">
-        <h1 class="bg-text1" data-bg-text="GALERIJA">GALERIJA</h1>
-        <p>Pogledajte pojedinačno naše proizvode</p>
+        <h1
+          class="bg-text1"
+          data-bg-text="GALERIJA"
+          data-aos="fade-in"
+          data-aos-delay="100"
+        >
+          GALERIJA
+        </h1>
+        <p data-aos="fade-in" data-aos-delay="200">
+          Pogledajte pojedinačno naše proizvode
+        </p>
       </div>
       <!-- SLIDER HEADER END -->
 
       <!-- SLIDER START -->
-      <div class="container">
+      <div
+        class="container"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <!-- slider start------------ -->
         <ul id="autoWidth" style="padding-top: 1%;" class="cs-hidden">
           <!-- hranilica 1 -->
@@ -418,7 +462,12 @@
     </div>
     <!-- KATALOG START -->
     <div class="katalog-section">
-      <div class="katalog-header" id="katalog">
+      <div
+        class="katalog-header"
+        id="katalog"
+        data-aos="fade-in"
+        data-aos-delay="100"
+      >
         <h1 class="bg-text2" data-bg-text="KATALOG">KATALOG</h1>
         <p>
           Pogledajte ili
@@ -437,6 +486,9 @@
         webkitAllowFullScreen
         mozallowfullscreen
         allowfullscreen
+        data-aos="flip-up"
+        data-aos-duration="3000"
+        data-aos-easing="ease-in-out"
       ></iframe>
     </div>
     <!-- KATALOG END -->
@@ -444,16 +496,28 @@
     <!-- CONTACT START -->
     <div class="contact-section">
       <div class="contact-header">
-        <h1 class="bg-text3" data-bg-text="KONTAKT" id="contact">
+        <h1
+          class="bg-text3"
+          data-bg-text="KONTAKT"
+          id="contact"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
           OSTANIMO U DODIRU
         </h1>
-        <p>
+        <p data-aos="fade-right" data-aos-delay="300">
           Stalan kontakt i povratne informacije su osnova svakog dobro
           osmišljenog biznisa
         </p>
       </div>
       <div class="contact-body">
-        <div class="contact-item">
+        <div
+          class="contact-item"
+          data-aos="flip-right"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <h1>FACEBOOK</h1>
           <p>Kontaktirajte nas putem facebook stranice</p>
           <a
@@ -463,7 +527,13 @@
             ><i class="fab fa-facebook-square"></i
           ></a>
         </div>
-        <div class="contact-item">
+        <div
+          class="contact-item"
+          data-aos="flip-down"
+          data-aos-delay="400"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <h1>
             STARA ŠKOLA
           </h1>
@@ -476,7 +546,13 @@
             ><i class="fas fa-phone-square-alt"></i
           ></a>
         </div>
-        <div class="contact-item">
+        <div
+          class="contact-item"
+          data-aos="flip-left"
+          data-aos-delay="600"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <h1>INSTAGRAM</h1>
           <p>Kontaktirajte nas putem instagram stranice</p>
           <a
@@ -540,6 +616,11 @@
     <!-- JQuery start -->
     <script type="text/javascript" src="./js/JQuery3.3.1.js"></script>
     <script type="text/javascript" src="./js/lightslider.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
     <!-- JQuery end -->
     <script src="js/app.js"></script>
   </body>
