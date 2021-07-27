@@ -266,47 +266,7 @@ body {
 
 @media screen and (max-width: 864px) {
   .kutija #social-media {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    font-size: 1em;
-    position: fixed;
-    top: 0;
-    z-index: 5;
-    background: #09814a;
-    left: 0;
-    width: 100vw;
-    height: 30px;
-  }
-  .kutija #social-media .social-media-item {
     display: none;
-  }
-  .kutija #social-media:before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f578";
-    font-size: 2rem;
-    color: white;
-    position: absolute;
-    padding: 5px;
-    top: 10%;
-    left: 5%;
-    font-weight: 900;
-    border: 1px solid white;
-    border-radius: 25%;
-    -webkit-transition: color 0.5s ease-in-out;
-    transition: color 0.5s ease-in-out;
-  }
-  .kutija #social-media:after {
-    content: url("/img/topsetplus-mini.png");
-    position: absolute;
-    padding: 5px;
-    top: 10%;
-    right: 49%;
-    font-weight: 900;
-    -webkit-transition: color 0.5s ease-in-out;
-    transition: color 0.5s ease-in-out;
   }
 }
 
@@ -317,7 +277,7 @@ body {
 
 @media screen and (max-width: 864px) {
   .kutija #hero-content {
-    margin-top: 110px;
+    margin-top: 50px;
   }
 }
 
@@ -531,8 +491,27 @@ body {
   }
 }
 
+.navbar .burger {
+  display: none;
+}
+
 @media screen and (max-width: 864px) {
   .navbar {
+    height: 60px;
+  }
+  .navbar .burger {
+    display: block;
+    font-size: 2.5rem;
+  }
+  .navbar .burger i {
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  .navbar .burger:active i {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .navbar .btn__green, .navbar .btn__blackTwo, .navbar .btn__logo {
     display: none;
   }
 }
@@ -545,17 +524,6 @@ body {
 
 /* NAVBAR END */
 /* MOBILE NAVBAR START */
-.mobile-nav {
-  position: relative;
-  bottom: 0;
-  background-color: #cecccc;
-  z-index: 10;
-}
-
-.mobile-nav .navSection {
-  height: 10vh;
-}
-
 /* MOBILE NAVBAR END */
 /* ABOUT US START */
 #about {
