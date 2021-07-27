@@ -483,13 +483,18 @@ body {
   // overflow: hidden;
   ul {
     list-style-type: none;
-  }
-  .items {
+    padding: 0px;
+
     li {
       margin: auto;
       display: block;
       text-align: center;
-      padding: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .btn {
+        padding-left: 70px;
+        padding-right: 70px;
+      }
     }
   }
 }

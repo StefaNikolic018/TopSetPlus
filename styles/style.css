@@ -535,13 +535,20 @@ body {
 
 .mobile-nav ul {
   list-style-type: none;
+  padding: 0px;
 }
 
-.mobile-nav .items li {
+.mobile-nav ul li {
   margin: auto;
   display: block;
   text-align: center;
-  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mobile-nav ul li .btn {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 /* MOBILE NAVBAR END */
