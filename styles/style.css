@@ -135,7 +135,7 @@
 }
 
 .btn__logo {
-  background-image: url("../img/topsetplus.png");
+  background-image: url("img/topsetplus.png");
   background-size: contain;
   height: 45px;
   width: 95px;
@@ -222,7 +222,7 @@ body {
   height: 100vh;
   margin: 0;
   position: relative;
-  background: url("../img/ribolov1.jpg");
+  background: url("img/ribolov1.jpg");
   background-origin: border-box;
   background-size: cover;
   border: 5px solid #09814a;
@@ -286,7 +286,7 @@ body {
   opacity: 0.9;
   top: -1rem;
   margin: auto;
-  background: url("../img/topsetplus.png") no-repeat center center;
+  background: url("img/topsetplus.png") no-repeat center center;
   background-size: 80% 50%;
   max-width: 450px;
   height: 280px;
@@ -412,7 +412,7 @@ body {
 }
 
 .fog-container .fog-img-first {
-  background: url("../img/ribolov2.png");
+  background: url("img/ribolov2.png");
   background-repeat: repeat-x;
   background-size: contain;
   background-position: center;
@@ -421,7 +421,7 @@ body {
 }
 
 .fog-container .fog-img-second {
-  background: url("../img/ribolov3.png");
+  background: url("img/ribolov3.png");
   background-repeat: repeat-x;
   background-size: contain;
   background-position: center;
@@ -539,7 +539,7 @@ body {
 .mobile-nav ul {
   list-style-type: none;
   padding: 0px;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .mobile-nav ul li {
@@ -557,6 +557,33 @@ body {
 
 .mobile-nav ul li .mobileLogo {
   width: 70%;
+}
+
+.mobile-nav .mobile-burger {
+  background-color: rgba(5, 5, 5, 0.1);
+  position: relative;
+  bottom: 0px;
+  height: 100px;
+  text-align: center;
+}
+
+.mobile-nav .mobile-burger .burger {
+  display: block;
+  font-size: 4rem;
+}
+
+.mobile-nav .mobile-burger .burger i {
+  color: #09814a;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-text-stroke: 2px #cecccc;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.mobile-nav .mobile-burger .burger:active i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 /* MOBILE NAVBAR END */
