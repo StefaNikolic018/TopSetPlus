@@ -34,12 +34,19 @@
     </div> -->
     <!-- NAVBAR MOBILE END -->
     <!-- HERO START -->
-    <div class="mobile-nav">
+    <div
+      class="mobile-nav mobile-nav__inactive"
+      id="mobileNav"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <ul>
         <li>
           <!-- <a class="btn btn__logo" id="navLogo" href="#kutija"></a> -->
           <img src="img/topsetplus.png" alt="TopSetPlus logo" /
-          class="mobileLogo">
+          class="mobileLogo" data-aos="fade-in" data-aos-duration="1200"
+          data-aos-easing="ease-in-out">
         </li>
 
         <li>
@@ -57,7 +64,14 @@
         </li>
       </ul>
       <div class="mobile-burger">
-        <a class="btn burger" id="burger" href="#" onclick="mobileNavbar()"
+        <a
+          class="btn burger"
+          id="burger"
+          href="#"
+          onclick="mobileNavbar()"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-out"
           ><i class="fas fa-fish"></i
         ></a>
       </div>

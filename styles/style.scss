@@ -151,7 +151,7 @@ $primaryGray: rgb(206, 204, 204);
   }
 
   &__logo {
-    background-image: url("img/topsetplus.png");
+    background-image: url("/img/topsetplus.png");
     background-size: contain;
     height: 45px;
     width: 95px;
@@ -218,8 +218,8 @@ body {
   height: 100vh;
   margin: 0;
   position: relative;
-  background: url("img/ribolov1.jpg");
-  // background: url("img/wordpress/hero-bg.webp");
+  background: url("/img/ribolov1.jpg");
+  // background: url("/img/wordpress/hero-bg.webp");
   background-origin: border-box;
   background-size: cover;
   //   background-size: 100% 100%;
@@ -288,7 +288,7 @@ body {
     //   }
     //   &:after {
     //     // font-family: "Font Awesome 5 Free";
-    //     content: url("img/topsetplus-mini.png");
+    //     content: url("/img/topsetplus-mini.png");
     //     // font-size: 2rem;
     //     // color: white;
     //     position: absolute;
@@ -316,7 +316,7 @@ body {
       opacity: 0.9;
       top: -1rem;
       margin: auto;
-      background: url("img/topsetplus.png") no-repeat center center;
+      background: url("/img/topsetplus.png") no-repeat center center;
       background-size: 80% 50%;
       max-width: 450px;
       height: 280px;
@@ -331,7 +331,7 @@ body {
       }
       @media screen and (max-width: 864px) {
         top: -3rem;
-        background-size: 85% 50%;
+        background-size: 80% 40%;
       }
     }
     @keyframes senkaLogo {
@@ -387,14 +387,14 @@ body {
     z-index: 2;
   }
   .fog-img-first {
-    background: url("img/ribolov2.png");
+    background: url("/img/ribolov2.png");
     background-repeat: repeat-x;
     background-size: contain;
     background-position: center;
     animation: magla 100s linear infinite;
   }
   .fog-img-second {
-    background: url("img/ribolov3.png");
+    background: url("/img/ribolov3.png");
     background-repeat: repeat-x;
     background-size: contain;
     background-position: center;
@@ -483,6 +483,12 @@ body {
   height: 100vh;
   border: 5px solid $primaryGray;
   // overflow: hidden;
+  &__inactive {
+    display: none;
+  }
+  &__active {
+    display: block;
+  }
   ul {
     list-style-type: none;
     padding: 0px;

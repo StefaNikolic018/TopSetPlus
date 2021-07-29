@@ -1,6 +1,7 @@
 var myNav = document.querySelector(".navbar");
 var logo = document.getElementById("navLogo");
 var katalog = document.getElementById("navKatalog");
+var mobileNav = document.getElementById("mobileNav");
 
 window.onscroll = function () {
   "use strict";
@@ -17,6 +18,19 @@ window.onscroll = function () {
     katalog.style.visibility = "hidden";
   }
 };
+
+function mobileNavbar() {
+  // if (mobileNav.classList.has("mobile-nav__inactive")) {
+  // mobileNav.classList
+  // .remove("mobile-nav__inactive")
+  // .add("mobile-nav__active");
+  // } else {
+  // mobileNav.classList
+  // .remove("mobile-nav__inactive")
+  // .add("mobile-nav__inactive");
+  // }
+  mobileNav.classList.toggle("mobile-nav__inactive");
+}
 
 // JavaScript Document
 $(document).ready(function () {
