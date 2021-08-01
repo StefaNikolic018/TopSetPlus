@@ -29,7 +29,19 @@ function mobileNavbar() {
   // .remove("mobile-nav__inactive")
   // .add("mobile-nav__inactive");
   // }
+  var opacity = 1;
+  if (!mobileNav.classList.contains("mobile-nav__inactive")) {
+    if (opacity == 1) {
+      do {
+        setTimeout(() => {
+          opacity = opacity - 0.1;
+          mobileNav.style.opacity(opacity);
+        }, 1000);
+      } while (opacity != 0);
+    }
+  }
   mobileNav.classList.toggle("mobile-nav__inactive");
+  document.body.classList.toggle("hide");
 }
 
 // JavaScript Document
