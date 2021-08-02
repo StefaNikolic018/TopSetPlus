@@ -266,7 +266,14 @@ body {
 
 @media screen and (max-width: 864px) {
   .kutija #social-media {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1em;
+    z-index: 5;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -277,7 +284,7 @@ body {
 
 @media screen and (max-width: 864px) {
   .kutija #hero-content {
-    margin-top: 50px;
+    margin-top: -20px;
   }
 }
 
@@ -506,7 +513,7 @@ body {
   .navbar .burger i {
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
-    -webkit-text-stroke: 1px #09814a;
+    -webkit-text-stroke: 2px #09814a;
   }
   .navbar .burger:active i {
     -webkit-transform: rotate(-90deg);
@@ -572,6 +579,45 @@ body {
 
 .mobile-nav ul li .mobileLogo {
   width: 70%;
+}
+
+.mobile-nav ul #social {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0.3)), to(rgba(5, 5, 5, 0.5)));
+  background: linear-gradient(360deg, rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0.5));
+  text-align: center;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.mobile-nav ul #social .social-media-item .fas {
+  color: #09814a;
+}
+
+.mobile-nav ul #social .social-media-item a {
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 864px) {
+  .mobile-nav ul #social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1em;
+    z-index: 5;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .mobile-nav .mobile-burger {

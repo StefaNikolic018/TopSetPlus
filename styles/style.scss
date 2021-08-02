@@ -254,14 +254,17 @@ body {
       }
     }
     @media screen and (max-width: 864px) {
-      display: none;
+      // display: none;
+      // }
+      flex-direction: column;
+      //   position: absolute;
+      font-size: 1em;
+      //   position: fixed;
+      //   top: 0;
+      z-index: 5;
+      padding-left: 0;
+      padding-right: 0;
     }
-    //   flex-direction: column;
-    //   position: absolute;
-    //   font-size: 1em;
-    //   position: fixed;
-    //   top: 0;
-    //   z-index: 5;
     //   background: $primaryGreen;
     //   left: 0;
     //   width: 100vw;
@@ -309,7 +312,7 @@ body {
     width: 100%;
     margin-top: 5rem;
     @media screen and (max-width: 864px) {
-      margin-top: 50px;
+      margin-top: -20px;
     }
     #logo {
       position: relative;
@@ -444,7 +447,7 @@ body {
       font-size: 2.5rem;
       i {
         transition: all 0.2s ease-in;
-        -webkit-text-stroke: 1px $primaryGreen;
+        -webkit-text-stroke: 2px $primaryGreen;
         // text-stroke: 2px $primaryGreen;
       }
       &:active {
@@ -509,6 +512,44 @@ body {
       }
       .mobileLogo {
         width: 70%;
+      }
+    }
+    #social {
+      background: linear-gradient(
+        360deg,
+        rgba($primaryBlack, 0.3),
+        rgba($primaryBlack, 0.5)
+      );
+      text-align: center;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-around;
+      // padding-bottom: 1rem;
+      // padding-top: 1rem;
+      // padding-left: 5rem;
+      // padding-right: 3rem;
+      flex-direction: row;
+      .social-media-item {
+        .fas {
+          color: $primaryGreen;
+        }
+        a {
+          color: white;
+          text-shadow: 0px 0px 5px black;
+          text-decoration: none;
+        }
+      }
+      @media screen and (max-width: 864px) {
+        // display: none;
+        // }
+        flex-direction: column;
+        //   position: absolute;
+        font-size: 1em;
+        //   position: fixed;
+        //   top: 0;
+        z-index: 5;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }

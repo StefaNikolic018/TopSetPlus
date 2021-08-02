@@ -2,6 +2,7 @@ var myNav = document.querySelector(".navbar");
 var logo = document.getElementById("navLogo");
 var katalog = document.getElementById("navKatalog");
 var mobileNav = document.getElementById("mobileNav");
+var mobLink = document.getElementsByClassName("mob-link");
 
 window.onscroll = function () {
   "use strict";
@@ -20,26 +21,6 @@ window.onscroll = function () {
 };
 
 function mobileNavbar() {
-  // if (mobileNav.classList.has("mobile-nav__inactive")) {
-  // mobileNav.classList
-  // .remove("mobile-nav__inactive")
-  // .add("mobile-nav__active");
-  // } else {
-  // mobileNav.classList
-  // .remove("mobile-nav__inactive")
-  // .add("mobile-nav__inactive");
-  // }
-  var opacity = 1;
-  if (!mobileNav.classList.contains("mobile-nav__inactive")) {
-    if (opacity == 1) {
-      do {
-        setTimeout(() => {
-          opacity = opacity - 0.1;
-          mobileNav.style.opacity(opacity);
-        }, 1000);
-      } while (opacity != 0);
-    }
-  }
   mobileNav.classList.toggle("mobile-nav__inactive");
   document.body.classList.toggle("hide");
 }
@@ -52,5 +33,10 @@ $(document).ready(function () {
     onSliderLoad: function () {
       $("#autoWidth").removeClass("cS-hidden");
     },
+  });
+
+  $(mobLink).on("click", function () {
+    mobileNav.classList.toggle("mobile-nav__inactive");
+    document.body.classList.toggle("hide");
   });
 });
