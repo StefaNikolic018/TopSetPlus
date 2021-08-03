@@ -547,11 +547,11 @@ body {
 
 .mobile-nav .mobile-copyright {
   position: relative;
-  bottom: -27px;
+  bottom: -30px;
   width: 100%;
   background-color: #cecccc;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .mobile-nav .mobile-copyright a {
@@ -582,7 +582,7 @@ body {
 }
 
 .mobile-nav #social .social-media-item .fas {
-  color: #09814a;
+  color: #050505;
 }
 
 .mobile-nav #social .social-media-item a {

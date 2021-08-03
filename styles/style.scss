@@ -488,11 +488,11 @@ body {
   transition: all 0.3 s;
   .mobile-copyright {
     position: relative;
-    bottom: -27px;
+    bottom: -30px;
     width: 100%;
     background-color: $primaryGray;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     a {
       color: rgba($primaryGreen, 0.9);
       text-decoration: none;
@@ -516,7 +516,7 @@ body {
     flex-direction: row;
     .social-media-item {
       .fas {
-        color: $primaryGreen;
+        color: $primaryBlack;
       }
       a {
         color: white;
