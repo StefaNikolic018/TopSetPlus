@@ -486,7 +486,52 @@ body {
   height: 100vh;
   border: 5px solid $primaryGray;
   transition: all 0.3 s;
-  // overflow: hidden;
+  .mobile-copyright {
+    position: relative;
+    bottom: -27px;
+    width: 100%;
+    background-color: $primaryGray;
+    text-align: center;
+    font-size: 1.2rem;
+    a {
+      color: rgba($primaryGreen, 0.9);
+      text-decoration: none;
+      &:hover {
+        color: rgba($primaryBlack, 0.8);
+      }
+    }
+  }
+  #social {
+    background: linear-gradient(
+      360deg,
+      rgba($primaryBlack, 0.3),
+      rgba($primaryBlack, 0.5)
+    );
+    text-align: center;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    flex-direction: row;
+    .social-media-item {
+      .fas {
+        color: $primaryGreen;
+      }
+      a {
+        color: white;
+        text-shadow: 0px 0px 5px black;
+        text-decoration: none;
+      }
+    }
+    @media screen and (max-width: 864px) {
+      flex-direction: column;
+      font-size: 1em;
+      z-index: 5;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   &__inactive {
     display: none;
   }
@@ -496,7 +541,7 @@ body {
   ul {
     list-style-type: none;
     padding: 0px;
-    margin-top: 80px;
+    margin-top: 30px;
     li {
       margin: auto;
       display: block;
@@ -511,45 +556,22 @@ body {
         }
       }
       .mobileLogo {
-        width: 70%;
-      }
-    }
-    #social {
-      background: linear-gradient(
-        360deg,
-        rgba($primaryBlack, 0.3),
-        rgba($primaryBlack, 0.5)
-      );
-      text-align: center;
-      font-size: 1.2rem;
-      display: flex;
-      justify-content: space-around;
-      // padding-bottom: 1rem;
-      // padding-top: 1rem;
-      // padding-left: 5rem;
-      // padding-right: 3rem;
-      flex-direction: row;
-      .social-media-item {
-        .fas {
-          color: $primaryGreen;
+        width: 80%;
+        transition: all 0.5s ease-in-out 0.1s;
+        animation-name: senkaMobileLogo;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        @keyframes senkaMobileLogo {
+          0% {
+            filter: drop-shadow(0 0 8px rgba($primaryGray, 0.5));
+          }
+          50% {
+            filter: drop-shadow(0 0 15px rgba($primaryGray, 0.7));
+          }
+          100% {
+            filter: drop-shadow(0 0 8px rgba($primaryGray, 0.5));
+          }
         }
-        a {
-          color: white;
-          text-shadow: 0px 0px 5px black;
-          text-decoration: none;
-        }
-      }
-      @media screen and (max-width: 864px) {
-        // display: none;
-        // }
-        flex-direction: column;
-        //   position: absolute;
-        font-size: 1em;
-        //   position: fixed;
-        //   top: 0;
-        z-index: 5;
-        padding-left: 0;
-        padding-right: 0;
       }
     }
   }

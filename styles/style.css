@@ -545,6 +545,65 @@ body {
   transition: all 0.3 s;
 }
 
+.mobile-nav .mobile-copyright {
+  position: relative;
+  bottom: -27px;
+  width: 100%;
+  background-color: #cecccc;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.mobile-nav .mobile-copyright a {
+  color: rgba(9, 129, 74, 0.9);
+  text-decoration: none;
+}
+
+.mobile-nav .mobile-copyright a:hover {
+  color: rgba(5, 5, 5, 0.8);
+}
+
+.mobile-nav #social {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0.3)), to(rgba(5, 5, 5, 0.5)));
+  background: linear-gradient(360deg, rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0.5));
+  text-align: center;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.mobile-nav #social .social-media-item .fas {
+  color: #09814a;
+}
+
+.mobile-nav #social .social-media-item a {
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 864px) {
+  .mobile-nav #social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1em;
+    z-index: 5;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .mobile-nav__inactive {
   display: none;
 }
@@ -556,7 +615,7 @@ body {
 .mobile-nav ul {
   list-style-type: none;
   padding: 0px;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
 .mobile-nav ul li {
@@ -578,45 +637,44 @@ body {
 }
 
 .mobile-nav ul li .mobileLogo {
-  width: 70%;
+  width: 80%;
+  -webkit-transition: all 0.5s ease-in-out 0.1s;
+  transition: all 0.5s ease-in-out 0.1s;
+  -webkit-animation-name: senkaMobileLogo;
+          animation-name: senkaMobileLogo;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
-.mobile-nav ul #social {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(5, 5, 5, 0.3)), to(rgba(5, 5, 5, 0.5)));
-  background: linear-gradient(360deg, rgba(5, 5, 5, 0.3), rgba(5, 5, 5, 0.5));
-  text-align: center;
-  font-size: 1.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+@-webkit-keyframes senkaMobileLogo {
+  0% {
+    -webkit-filter: drop-shadow(0 0 8px rgba(206, 204, 204, 0.5));
+            filter: drop-shadow(0 0 8px rgba(206, 204, 204, 0.5));
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 0 15px rgba(206, 204, 204, 0.7));
+            filter: drop-shadow(0 0 15px rgba(206, 204, 204, 0.7));
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 8px rgba(206, 204, 204, 0.5));
+            filter: drop-shadow(0 0 8px rgba(206, 204, 204, 0.5));
+  }
 }
 
-.mobile-nav ul #social .social-media-item .fas {
-  color: #09814a;
-}
-
-.mobile-nav ul #social .social-media-item a {
-  color: white;
-  text-shadow: 0px 0px 5px black;
-  text-decoration: none;
-}
-
-@media screen and (max-width: 864px) {
-  .mobile-nav ul #social {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: 1em;
-    z-index: 5;
-    padding-left: 0;
-    padding-right: 0;
+@keyframes senkaMobileLogo {
+  0% {
+    -webkit-filter: drop-shadow(0 0 8px rgba(206, 204, 204, 0.5));
+            filter: drop-shadow(0 0 8px rgba(206, 204, 204, 0.5));
+  }
+  50% {
+    -webkit-filter: drop-shadow(0 0 15px rgba(206, 204, 204, 0.7));
+            filter: drop-shadow(0 0 15px rgba(206, 204, 204, 0.7));
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 8px rgba(206, 204, 204, 0.5));
+            filter: drop-shadow(0 0 8px rgba(206, 204, 204, 0.5));
   }
 }
 
