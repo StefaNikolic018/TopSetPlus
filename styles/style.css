@@ -541,8 +541,9 @@ body {
   width: 100%;
   height: 100vh;
   border: 5px solid #cecccc;
-  -webkit-transition: all 0.3 s;
-  transition: all 0.3 s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
 }
 
 .mobile-nav .mobile-copyright {
@@ -627,8 +628,8 @@ body {
 }
 
 .mobile-nav ul li .btn {
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .mobile-nav ul li .btn__green {

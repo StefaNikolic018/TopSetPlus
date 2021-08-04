@@ -21,7 +21,7 @@ window.onscroll = function () {
 };
 
 function mobileNavbar() {
-  mobileNav.classList.toggle("mobile-nav__inactive");
+  mobileNav.classList.toggle("mobile-nav__active");
   document.body.classList.toggle("hide");
 }
 
@@ -36,7 +36,7 @@ $(document).ready(function () {
   });
 
   $(mobLink).on("click", function () {
-    mobileNav.classList.toggle("mobile-nav__inactive");
+    mobileNav.classList.toggle("mobile-nav__active");
     document.body.classList.toggle("hide");
   });
 });
