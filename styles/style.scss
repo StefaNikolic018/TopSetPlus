@@ -534,10 +534,35 @@ body {
     }
   }
   &__inactive {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
     display: none;
   }
   &__active {
+    opacity: 1;
     display: block;
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+    @keyframes fadeIn {
+      0% {
+        filter: opacity(0);
+      }
+      20% {
+        filter: opacity(0.2);
+      }
+      40% {
+        filter: opacity(0.4);
+      }
+      60% {
+        filter: opacity(0.6);
+      }
+      80% {
+        filter: opacity(0.8);
+      }
+      100% {
+        filter: opacity(1);
+      }
+    }
   }
   ul {
     list-style-type: none;
