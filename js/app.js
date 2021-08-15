@@ -21,8 +21,10 @@ window.onscroll = function () {
 };
 
 function mobileNavbar() {
-  mobileNav.classList.toggle("mobile-nav__active");
+  // mobileNav.classList.toggle("mobile-nav__active");
   document.body.classList.toggle("hide");
+  if ($(mobileNav).css("opacity") == 0) $(mobileNav).css("opacity", 1);
+  else $(mobileNav).css("opacity", 0);
 }
 
 // JavaScript Document
@@ -36,7 +38,9 @@ $(document).ready(function () {
   });
 
   $(mobLink).on("click", function () {
-    mobileNav.classList.toggle("mobile-nav__active");
+    // mobileNav.classList.toggle("mobile-nav__active");
     document.body.classList.toggle("hide");
+    if ($(mobileNav).css("opacity") == 0) $(mobileNav).css("opacity", 1);
+    else $(mobileNav).css("opacity", 0);
   });
 });
