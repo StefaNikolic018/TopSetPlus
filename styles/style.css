@@ -222,7 +222,7 @@ body {
   height: 100vh;
   margin: 0;
   position: relative;
-  background: url("/img/ribolov1.jpg");
+  background: url("../img/ribolov1.jpg");
   background-origin: border-box;
   background-size: cover;
   border: 5px solid #09814a;
@@ -293,7 +293,7 @@ body {
   opacity: 0.9;
   top: -1rem;
   margin: auto;
-  background: url("/img/topsetplus.png") no-repeat center center;
+  background: url("../img/topsetplus.png") no-repeat center center;
   background-size: 80% 50%;
   max-width: 450px;
   height: 280px;
