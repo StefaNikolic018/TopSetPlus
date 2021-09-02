@@ -390,14 +390,14 @@ body {
     z-index: 2;
   }
   .fog-img-first {
-    background: url("/img/ribolov2.png");
+    background: url("../img/ribolov2.png");
     background-repeat: repeat-x;
     background-size: contain;
     background-position: center;
     animation: magla 100s linear infinite;
   }
   .fog-img-second {
-    background: url("/img/ribolov3.png");
+    background: url("../img/ribolov3.png");
     background-repeat: repeat-x;
     background-size: contain;
     background-position: center;
@@ -439,6 +439,22 @@ body {
   .burger {
     display: none;
   }
+  span {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 2rem;
+    .btn {
+      gap: 0px;
+      padding: 0px;
+      margin: 0px;
+    }
+    #srb{
+      height: 50px;
+    }
+    #eng{
+      height: 40px;
+    }
+  }
   @media screen and (max-width: 864px) {
     // display: none;
     height: 60px;
@@ -465,6 +481,10 @@ body {
       }
     }
   }
+}
+
+#navLogo {
+  background-image: url('../img/topsetplus-mini.png');
 }
 .scroll {
   // background: linear-gradient(360deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 0, 0.7));
