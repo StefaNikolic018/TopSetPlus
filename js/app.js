@@ -23,8 +23,14 @@ window.onscroll = function () {
 function mobileNavbar() {
   // mobileNav.classList.toggle("mobile-nav__active");
   document.body.classList.toggle("hide");
-  if ($(mobileNav).css("opacity") == 0) $(mobileNav).css("opacity", 1);
-  else $(mobileNav).css("opacity", 0);
+  if ($(mobileNav).css("opacity") == 0) {
+    $(mobileNav).click();
+    $(mobileNav).css("opacity", 1);
+    $(mobileNav).css("display", "block");
+  } else {
+    $(mobileNav).css("opacity", 0);
+    $(mobileNav).css("display", "none");
+  }
 }
 
 // JavaScript Document
@@ -40,7 +46,13 @@ $(document).ready(function () {
   $(mobLink).on("click", function () {
     // mobileNav.classList.toggle("mobile-nav__active");
     document.body.classList.toggle("hide");
-    if ($(mobileNav).css("opacity") == 0) $(mobileNav).css("opacity", 1);
-    else $(mobileNav).css("opacity", 0);
+    if ($(mobileNav).css("opacity") == 0) {
+      $(mobileNav).click();
+      $(mobileNav).css("opacity", 1);
+      $(mobileNav).css("display", "block");
+    } else {
+      $(mobileNav).css("opacity", 0);
+      $(mobileNav).css("display", "none");
+    }
   });
 });

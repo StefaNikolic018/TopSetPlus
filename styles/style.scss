@@ -448,10 +448,10 @@ body {
       padding: 0px;
       margin: 0px;
     }
-    #srb{
+    #srb {
       height: 50px;
     }
-    #eng{
+    #eng {
       height: 40px;
     }
   }
@@ -484,7 +484,7 @@ body {
 }
 
 #navLogo {
-  background-image: url('../img/topsetplus-mini.png');
+  background-image: url("../img/topsetplus-mini.png");
 }
 .scroll {
   // background: linear-gradient(360deg, rgba(0, 0, 0, 0.5), rgba(0, 255, 0, 0.7));
@@ -556,7 +556,7 @@ body {
   &__inactive {
     transition: all 0.3s ease-in-out;
     opacity: 0;
-    // display: none;
+    display: none;
   }
   // &__active {
   //   opacity: 1;
