@@ -96,6 +96,16 @@ $primaryGray: rgb(206, 204, 204);
   }
 }
 
+.bg-text4::after {
+  @include bg-text;
+  color: $primaryGreen;
+  bottom: 45px;
+  left: -60px;
+  @media screen and (max-width: 864px) {
+    display: none;
+  }
+}
+
 .btn {
   display: inline-block;
   font-weight: 700;
@@ -1216,6 +1226,9 @@ body {
       &:hover {
         color: rgba($primaryBlack, 0.8);
       }
+    }
+    @media screen and (max-width:864px){
+      padding-bottom: 70px;
     }
   }
 }
