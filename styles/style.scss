@@ -76,6 +76,14 @@ $primaryGray: rgb(206, 204, 204);
       text-shadow: 2px 2px 4px $primaryGreen;
     }
   }
+  @media screen and (max-width: 864px) {
+    font-size: 2rem;
+    bottom: 70px;
+    right: 10px;
+    .fas {
+      text-shadow: 1px 1px 2px $primaryBlack;
+    }
+  }
 }
 
 .bg-text3::after {

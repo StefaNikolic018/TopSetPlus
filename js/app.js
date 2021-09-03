@@ -20,8 +20,8 @@ window.onscroll = function () {
     katalog.style.visibility = "hidden";
   }
 
-  if (document.body.scrollTop >= 800 ||
-    document.documentElement.scrollTop >= 800) {
+  if (document.body.scrollTop >= 700 ||
+    document.documentElement.scrollTop >= 700) {
     toTop.style.display = 'block';
   } else {
     toTop.style.display = 'none';

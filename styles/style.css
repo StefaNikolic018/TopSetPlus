@@ -39,6 +39,17 @@
   text-shadow: 2px 2px 4px #09814a;
 }
 
+@media screen and (max-width: 864px) {
+  #toTop {
+    font-size: 2rem;
+    bottom: 70px;
+    right: 10px;
+  }
+  #toTop .fas {
+    text-shadow: 1px 1px 2px #050505;
+  }
+}
+
 .bg-text3::after {
   content: attr(data-bg-text);
   display: block;
