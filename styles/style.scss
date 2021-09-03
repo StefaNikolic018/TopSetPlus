@@ -50,6 +50,34 @@ $primaryGray: rgb(206, 204, 204);
   opacity: 0.2;
 }
 
+#toTop {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: $primaryGreen; /* Text color */
+  background-color: transparent;
+  cursor: pointer; /* Add a mouse pointer on hover */
+  // padding: 15px; /* Some padding */
+  // border-radius: 10px; /* Rounded corners */
+  font-size: 4rem; /* Increase font size */
+  transition: all 0.3s;
+  .fas {
+    text-shadow: 2px 2px 4px $primaryBlack;
+    transition: all 0.3s;
+  }
+  &:hover {
+    // background-color: #555;
+    color: $primaryBlack;
+    .fas {
+      text-shadow: 2px 2px 4px $primaryGreen;
+    }
+  }
+}
+
 .bg-text3::after {
   @include bg-text;
   color: $primaryGreen;
@@ -440,13 +468,10 @@ body {
     display: none;
   }
   span {
-    align-items: flex-end;
-    align-content: flex-end;
-    align-self: flex-end;
-    text-align: right;
-    float: right;
+    position: absolute;
+    right: 100px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 2rem;
     .btn {
       gap: 0px;
@@ -454,11 +479,21 @@ body {
       margin: 0px;
     }
     #srb {
-      height: 30px;
+      height: 25px;
+      filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+
+      &:hover{
+        transform: scale(1.15);
+        filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
+      }
     }
     #eng {
-      height: 25px;
-      margin-bottom: 1px;
+      height: 23px;
+      filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+      &:hover{
+        transform: scale(1.15);
+        filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
+      }
     }
     @media screen and (max-width: 864px) {
       display: none;
@@ -518,10 +553,9 @@ body {
   height: 100vh;
   border: 5px solid $primaryGray;
   transition: all 0.3s ease-in-out;
-  // opacity: 1;
   .mobile-copyright {
     position: relative;
-    bottom: -30px;
+    bottom: -9px;
     width: 100%;
     background-color: $primaryGray;
     text-align: center;
@@ -570,36 +604,9 @@ body {
     opacity: 0;
     display: none;
   }
-  // &__active {
-  //   opacity: 1;
-  //   display: block;
-  //   animation-name: fadeIn;
-  //   animation-duration: 0.2s;
-  //   @keyframes fadeIn {
-  //     0% {
-  //       filter: opacity(0);
-  //     }
-  //     20% {
-  //       filter: opacity(0.2);
-  //     }
-  //     40% {
-  //       filter: opacity(0.4);
-  //     }
-  //     60% {
-  //       filter: opacity(0.6);
-  //     }
-  //     80% {
-  //       filter: opacity(0.8);
-  //     }
-  //     100% {
-  //       filter: opacity(1);
-  //     }
-  //   }
-  // }
   ul {
     list-style-type: none;
     padding: 0px;
-    margin-top: 30px;
     li {
       margin: auto;
       display: block;
@@ -656,6 +663,35 @@ body {
           transform: rotate(-90deg);
           // text-stroke: 2px $primaryGreen;
         }
+      }
+    }
+  }
+  span {
+    // position: absolute;
+    // right: 100px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2rem;
+    .btn {
+      gap: 0px;
+      padding: 0px;
+      margin: 0px;
+    }
+    #srb {
+      height: 25px;
+      filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+
+      &:hover{
+        transform: scale(1.15);
+        filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
+      }
+    }
+    #eng {
+      height: 23px;
+      filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+      &:hover{
+        transform: scale(1.15);
+        filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
       }
     }
   }

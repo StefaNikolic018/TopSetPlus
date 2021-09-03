@@ -1,4 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+#toTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  color: #09814a;
+  /* Text color */
+  background-color: transparent;
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  font-size: 4rem;
+  /* Increase font size */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#toTop .fas {
+  text-shadow: 2px 2px 4px #050505;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#toTop:hover {
+  color: #050505;
+}
+
+#toTop:hover .fas {
+  text-shadow: 2px 2px 4px #09814a;
+}
+
 .bg-text3::after {
   content: attr(data-bg-text);
   display: block;
@@ -503,17 +543,10 @@ body {
 }
 
 .navbar span {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  text-align: right;
-  float: right;
+  position: absolute;
+  right: 100px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 2rem;
 }
 
@@ -524,12 +557,29 @@ body {
 }
 
 .navbar span #srb {
-  height: 30px;
+  height: 25px;
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+          filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+}
+
+.navbar span #srb:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
+          filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
 }
 
 .navbar span #eng {
-  height: 25px;
-  margin-bottom: 1px;
+  height: 23px;
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+          filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+}
+
+.navbar span #eng:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
+          filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
 }
 
 @media screen and (max-width: 864px) {
@@ -590,7 +640,7 @@ body {
 
 .mobile-nav .mobile-copyright {
   position: relative;
-  bottom: -30px;
+  bottom: -9px;
   width: 100%;
   background-color: #cecccc;
   text-align: center;
@@ -657,7 +707,6 @@ body {
 .mobile-nav ul {
   list-style-type: none;
   padding: 0px;
-  margin-top: 30px;
 }
 
 .mobile-nav ul li {
@@ -746,6 +795,44 @@ body {
 .mobile-nav .mobile-burger .burger:active i {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.mobile-nav span {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+}
+
+.mobile-nav span .btn {
+  gap: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.mobile-nav span #srb {
+  height: 25px;
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+          filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+}
+
+.mobile-nav span #srb:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
+          filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
+}
+
+.mobile-nav span #eng {
+  height: 23px;
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+          filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.8));
+}
+
+.mobile-nav span #eng:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
+          filter: drop-shadow(0px 0px 3px rgba(206, 204, 204, 0.5));
 }
 
 /* MOBILE NAVBAR END */

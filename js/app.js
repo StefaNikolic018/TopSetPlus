@@ -3,6 +3,7 @@ var logo = document.getElementById("navLogo");
 var katalog = document.getElementById("navKatalog");
 var mobileNav = document.getElementById("mobileNav");
 var mobLink = document.getElementsByClassName("mob-link");
+var toTop = document.getElementById("toTop");
 
 window.onscroll = function () {
   "use strict";
@@ -18,7 +19,19 @@ window.onscroll = function () {
     logo.style.visibility = "hidden";
     katalog.style.visibility = "hidden";
   }
+
+  if (document.body.scrollTop >= 800 ||
+    document.documentElement.scrollTop >= 800) {
+    toTop.style.display = 'block';
+  } else {
+    toTop.style.display = 'none';
+  }
 };
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 function mobileNavbar() {
   // mobileNav.classList.toggle("mobile-nav__active");
