@@ -297,6 +297,9 @@ body {
         color: white;
         text-shadow: 0px 0px 5px black;
         text-decoration: none;
+        &:hover {
+          color: rgba(white, 0.8);
+        }
       }
     }
     @media screen and (max-width: 864px) {
@@ -491,6 +494,11 @@ body {
     font-weight: 700;
     color: rgba(255, 255, 255, 0.7);
     font-size: 2rem;
+    @media screen and (min-width: 864px) and (max-width: 1270px) {
+      display: block;
+      position: relative;
+      right: 0;
+    }
     .btn {
       gap: 0px;
       padding: 0px;

@@ -25,13 +25,9 @@
 </head>
 
 <body>
-  <!-- NAVBAR MOBILE START -->
-  <!-- <div class="mobile-nav">
-      <div class="menu"></div>
-      <div class="navSection"></div>
-    </div> -->
   <button onclick="scrollToTop()" id="toTop" title="Go to top"><i
-      class="fas fa-caret-square-up"></i></button>
+    class="fas fa-caret-square-up"></i></button>
+    <!-- NAVBAR MOBILE START -->
   <div class="mobile-nav mobile-nav__inactive" id="mobileNav"
     style="display: none;">
     <div id="social">
@@ -50,7 +46,6 @@
     </div>
     <ul>
       <li>
-        <!-- <a class="btn btn__logo" id="navLogo" href="#kutija"></a> -->
         <img src="img/topsetplus.png" alt="TopSetPlus logo" / class="mobileLogo"
           data-aos="fade-in" data-aos-duration="500"
           data-aos-easing="ease-in-out">
@@ -71,18 +66,19 @@
       </li>
       <li>
         <span>
-          <a href="index.html"><img src="img/serbia.png" id="srb" alt="serbian" /></a>
+          <a href="/index" id="srb1"><img src="img/serbia.png" id="srb" alt="serbian" /></a>
           /
-          <a href="en.html"><img src="img/united-states.png" id="eng" alt="english" /></a>
+          <a href="/en" id="eng1"><img src="img/united-states.png" id="eng" alt="english" /></a>
         </span>
       </li>
     </ul>
-    <div class="mobile-copyright">
-      Copyright &copy; 2021
-      <a href="https://www.linkedin.com/in/stefanikolic18/"
-        target="_blank">StefaNikolic</a>
-    </div>
+    
     <div class="mobile-burger">
+      <div class="mobile-copyright">
+        Copyright &copy; 2021
+        <a href="https://www.linkedin.com/in/stefanikolic18/"
+          target="_blank">StefaNikolic</a>
+      </div>
       <a class="btn burger" id="burger" onclick="mobileNavbar()"><i
           class="fas fa-fish"></i></a>
     </div>
@@ -92,7 +88,6 @@
   <!-- HERO START -->
 
   <div class="kutija" id="kutija">
-    <!-- <img id="pozadina" src="img/pozadina.jpg"> -->
 
     <!-- SOCIAL MEDIA START -->
     <div id="social-media">
@@ -120,9 +115,6 @@
       <div id="podnaslov">
         Production of fishing feeders and following equipment
       </div>
-      <!-- <div class="button">
-          <a href="#katalog"><h1 class="text">Katalog</h1></a>
-        </div> -->
       <div class="call-to-action">
         <a href="#katalog" class="btn btn__black">Catalogue</a>
       </div>
@@ -134,7 +126,6 @@
   <!-- FOG END -->
   <!-- NAVBAR START -->
   <div class="navbar">
-    <!-- <ul class="items"> -->
     <a class="btn burger" id="burger" onclick="mobileNavbar();return false;">
       <i class="fas fa-fish"></i>
     </a>
@@ -142,27 +133,20 @@
       style="visibility: hidden;" data-aos="fade-in" data-aos-duration="1000"
       data-aos-easing="ease-in-out"></a>
 
-    <!-- <li> -->
     <a class="btn btn__green" href="#about">About us</a>
-    <!-- </li> -->
-    <!-- <li> -->
     <a class="btn btn__green" href="#gallery">Gallery</a>
-    <!-- </li> -->
-    <!-- <li> -->
     <a class="btn btn__green" href="#contact">Contact</a>
-    <!-- </li> -->
 
     <a class="btn btn__blackTwo" id="navKatalog" href="#katalog"
       style="visibility: hidden;" data-aos="fade-in" data-aos-duration="1000"
       data-aos-easing="ease-in-out">Catalogue</a>
 
     <span>
-      <a href="index.html"><img src="img/serbia.png" id="srb" alt="serbian" /></a>
+      <a href="/index" id="srb1"><img src="img/serbia.png" id="srb" alt="serbian" /></a>
       /
-      <a href="en.html"><img src="img/united-states.png" id="eng" alt="english" /></a>
+      <a href="/en" id="eng1"><img src="img/united-states.png" id="eng" alt="english" /></a>
     </span>
 
-    <!-- </ul> -->
   </div>
   <!-- NAVBAR END -->
   <div class="main">
@@ -175,7 +159,6 @@
           </h1>
           <hr id="h-line1" />
           <h1 id="about-title">What do <span class="rec">we</span> do</h1>
-          <!-- <hr id="h-line2" /> -->
 
           <p id="about-p">
             TopSet plus is a company whose activity is fishing production
@@ -188,7 +171,7 @@
           </p>
           <hr id="h-line3" />
         </div>
-        <img id="about-img" src="img/wordpress/hranilice1.webp" alt="feeders"
+        <img id="about-img" src="img/hranilice1.webp" alt="feeders"
           data-aos="fade-right" data-aos-delay="50" />
       </div>
       <div class="call-to-action">
@@ -217,16 +200,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 01</p>
+            <p class="heading">TUNNEL FEEDER</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica1.webp" alt=""
+            <img src="img/gallery/hranilica1.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  10g, 15g, 20g, 25g, 30g, 40g, 50g, 60g, 80g
               </p>
             </div>
           </div>
@@ -237,16 +220,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 02</p>
+            <p class="heading">ROUND FEEDER</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica2.webp" alt=""
+            <img src="img/gallery/hranilica2.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  10g, 15g, 20g, 25g, 30g, 40g, 50g, 60g
               </p>
             </div>
           </div>
@@ -257,16 +240,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 03</p>
+            <p class="heading">SQUARE FEEDER</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica3.webp" alt=""
+            <img src="img/gallery/hranilica3.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  10g, 15g, 20g, 25g, 30g, 40g, 50g, 60g, 80g
               </p>
             </div>
           </div>
@@ -277,16 +260,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 04</p>
+            <p class="heading">WITH MAGGOT INSERTION</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica4.webp" alt=""
+            <img src="img/gallery/hranilica4.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  10g, 15g, 20g, 25g, 30g, 40g, 50g, 60g, 80g
               </p>
             </div>
           </div>
@@ -297,16 +280,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 05</p>
+            <p class="heading">WITH OPEN-END INSERTION</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica5.webp" alt=""
+            <img src="img/gallery/hranilica5.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  10g, 15g, 20g, 25g, 30g, 40g, 50g, 60g, 80g
               </p>
             </div>
           </div>
@@ -317,16 +300,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 06</p>
+            <p class="heading">FEEDER WITH COVER</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica6.webp" alt=""
+            <img src="img/gallery/hranilica6.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  10g, 15g, 20g, 25g, 30g, 40g, 50g, 60g, 80g
               </p>
             </div>
           </div>
@@ -337,16 +320,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 07</p>
+            <p class="heading">MAGGOT WITH 2 CAPS</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica7.webp" alt=""
+            <img src="img/gallery/hranilica7.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  10g, 20g, 30g, 40g, 60g, 80g
               </p>
             </div>
           </div>
@@ -357,16 +340,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 08</p>
+            <p class="heading">MAGGOT FEEDER</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica8.webp" alt=""
+            <img src="img/gallery/hranilica8.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  10g, 20g, 30g, 40g, 60g, 80g
               </p>
             </div>
           </div>
@@ -377,16 +360,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 09</p>
+            <p class="heading">BULLET MAGGOT</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica9.webp" alt=""
+            <img src="img/gallery/hranilica9.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  20g, 30g, 40g, 50g 60g, 80g
               </p>
             </div>
           </div>
@@ -397,16 +380,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 10</p>
+            <p class="heading">BULLET MAGGOT</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica10.webp" alt=""
+            <img src="img/gallery/hranilica10.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  20g, 30g, 40g, 50g 60g, 80g
               </p>
             </div>
           </div>
@@ -417,16 +400,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 11</p>
+            <p class="heading">ROCKET FEEDER</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica11.webp" alt=""
+            <img src="img/gallery/hranilica11.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  30g, 40g, 50g 60g, 80g
               </p>
             </div>
           </div>
@@ -437,16 +420,16 @@
           <!-- slider box start -->
           <div class="box">
             <!-- heading -->
-            <p class="heading">FEEDER 12</p>
+            <p class="heading">POLE RIG WINDERS</p>
             <!-- model -->
-            <img src="img//wordpress//gallery/hranilica12.webp" alt=""
+            <img src="img/gallery/hranilica12.webp" alt=""
               class="model" />
             <!-- details -->
             <div class="details">
               <!-- details about feeder -->
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laboriosam, labore.
+                Available:</br>
+                  20cm, 25cm, 35cm
               </p>
             </div>
           </div>
@@ -463,8 +446,8 @@
       <h1 class="bg-text2" data-bg-text="CATALOGUE">CATALOGUE</h1>
       <p>
         Check out or
-        <a href="https://www.flipbookpdf.net/web/files/uploads/11da66f6efffa21eef7fc5d448759c11dac46fd4202104.pdf"
-          target="_blank">download</a>
+        <a href="/TopSet-plus-Catalogue"
+          download>download</a>
         our product catalogue
       </p>
     </div>
@@ -509,7 +492,7 @@
       <div class="contact-item" data-aos="flip-left" data-aos-delay="600"
         data-aos-duration="1000" data-aos-easing="ease-in-out">
         <h1>INSTAGRAM</h1>
-        <p>Contac us via our Instagram page</p>
+        <p>Contact us via our Instagram page</p>
         <a href="https://www.instagram.com/topsetplus/" target="_blank"
           class="btn"><i class="fab fa-instagram-square"></i></a>
       </div>
